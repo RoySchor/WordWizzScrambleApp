@@ -15,6 +15,10 @@
 		9C0007792B55EC21002325DF /* spelling_bee_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007782B55EC21002325DF /* spelling_bee_gameUITests.swift */; };
 		9C00077B2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00077A2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift */; };
 		9C0007A22B56AC05002325DF /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A12B56AC05002325DF /* constants.swift */; };
+		9C0007A42B56CC16002325DF /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A32B56CC16002325DF /* WordListView.swift */; };
+		9C0007A62B56CCD0002325DF /* CurrentWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A52B56CCD0002325DF /* CurrentWordView.swift */; };
+		9C0007A82B56CD94002325DF /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A72B56CD94002325DF /* LetterButtonView.swift */; };
+		9C0007AA2B56CDE7002325DF /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A92B56CDE7002325DF /* ScoreView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +50,10 @@
 		9C0007782B55EC21002325DF /* spelling_bee_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameUITests.swift; sourceTree = "<group>"; };
 		9C00077A2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9C0007A12B56AC05002325DF /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		9C0007A32B56CC16002325DF /* WordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListView.swift; sourceTree = "<group>"; };
+		9C0007A52B56CCD0002325DF /* CurrentWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWordView.swift; sourceTree = "<group>"; };
+		9C0007A72B56CD94002325DF /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
+		9C0007A92B56CDE7002325DF /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +106,10 @@
 			children = (
 				9C00075D2B55EC18002325DF /* spelling_bee_gameApp.swift */,
 				9C00075F2B55EC18002325DF /* ContentView.swift */,
+				9C0007A72B56CD94002325DF /* LetterButtonView.swift */,
+				9C0007A92B56CDE7002325DF /* ScoreView.swift */,
+				9C0007A52B56CCD0002325DF /* CurrentWordView.swift */,
+				9C0007A32B56CC16002325DF /* WordListView.swift */,
 				9C0007612B55EC20002325DF /* Assets.xcassets */,
 				9C0007632B55EC20002325DF /* Preview Content */,
 				9C0007A12B56AC05002325DF /* constants.swift */,
@@ -260,9 +272,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C0007A42B56CC16002325DF /* WordListView.swift in Sources */,
 				9C0007602B55EC18002325DF /* ContentView.swift in Sources */,
 				9C00075E2B55EC18002325DF /* spelling_bee_gameApp.swift in Sources */,
 				9C0007A22B56AC05002325DF /* constants.swift in Sources */,
+				9C0007AA2B56CDE7002325DF /* ScoreView.swift in Sources */,
+				9C0007A82B56CD94002325DF /* LetterButtonView.swift in Sources */,
+				9C0007A62B56CCD0002325DF /* CurrentWordView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

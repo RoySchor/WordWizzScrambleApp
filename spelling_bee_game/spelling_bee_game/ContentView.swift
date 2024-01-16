@@ -10,7 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var words: [String] = ["pants", "span", "stat"]
     var letters: [String] = ["a", "t", "s", "p", "n"]
-    var score: Int = 0
+    var currentWord: String = "ant"
+    var score: Int = 3
     
     var body: some View {
         ZStack {
@@ -24,6 +25,14 @@ struct ContentView: View {
                     .font(.title)
                     .frame(width: 500, height: 100)
                 Spacer()
+                
+                WordListView(words: words)
+                
+                // Need to add additional stying here
+                Text("Current Word is:")
+                CurrentWordView(currentWord: currentWord)
+                
+                ScoreView(score: score)
             }
         }
     }
