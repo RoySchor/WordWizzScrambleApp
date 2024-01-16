@@ -8,6 +8,10 @@
 import SwiftUI
 
 struct ContentView: View {
+    var words: [String] = ["pants", "span", "stat"]
+    var letters: [String] = ["a", "t", "s", "p", "n"]
+    var score: Int = 0
+    
     var body: some View {
         ZStack {
             Color(Constants.BackgroundColorName.bkColor)
