@@ -6,3 +6,10 @@
 //
 
 import Foundation
+
+struct Constants {
+    
+    struct BackgroundColorName {
+        static let bkColor = "backgroundColor"
+    }
+}

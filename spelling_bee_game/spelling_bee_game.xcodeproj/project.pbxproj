@@ -14,6 +14,7 @@
 		9C00076F2B55EC20002325DF /* spelling_bee_gameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00076E2B55EC20002325DF /* spelling_bee_gameTests.swift */; };
 		9C0007792B55EC21002325DF /* spelling_bee_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007782B55EC21002325DF /* spelling_bee_gameUITests.swift */; };
 		9C00077B2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00077A2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift */; };
+		9C0007A22B56AC05002325DF /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A12B56AC05002325DF /* constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		9C0007742B55EC20002325DF /* spelling_bee_gameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spelling_bee_gameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0007782B55EC21002325DF /* spelling_bee_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameUITests.swift; sourceTree = "<group>"; };
 		9C00077A2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9C0007A12B56AC05002325DF /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +100,7 @@
 				9C00075F2B55EC18002325DF /* ContentView.swift */,
 				9C0007612B55EC20002325DF /* Assets.xcassets */,
 				9C0007632B55EC20002325DF /* Preview Content */,
+				9C0007A12B56AC05002325DF /* constants.swift */,
 			);
 			path = spelling_bee_game;
 			sourceTree = "<group>";
@@ -259,6 +262,7 @@
 			files = (
 				9C0007602B55EC18002325DF /* ContentView.swift in Sources */,
 				9C00075E2B55EC18002325DF /* spelling_bee_gameApp.swift in Sources */,
+				9C0007A22B56AC05002325DF /* constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
