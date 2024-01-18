@@ -12,8 +12,12 @@ struct CurrentWordView: View {
     var currentWord: String
 
     var body: some View {
-        Text(currentWord)
-            .font(.title)
-            // Need to add more modifiers for styling
+        HStack(spacing: 15) {
+            ForEach(currentWord.map { String($0) }, id: \.self) { letter in
+                Text(letter)
+                    .font(.title)
+                    .bold()
+            }
+        }
     }
 }

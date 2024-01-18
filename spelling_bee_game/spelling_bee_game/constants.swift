@@ -10,6 +10,10 @@ import Foundation
 struct Constants {
     
     struct BackgroundColorName {
-        static let bkColor = "backgroundColor"
+        static let bkColor = "overallbackgroundColor"
+    }
+    
+    struct FoundWordsBackgroundColorName {
+        static let bkColor = "foundwordsbackground"
     }
 }

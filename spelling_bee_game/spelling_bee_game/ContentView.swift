@@ -19,7 +19,7 @@ struct ContentView: View {
                 .ignoresSafeArea()
             
             VStack {
-                Text("Solving The Spelling Bee")
+                Text("Solving The Lion Spell")
                     .foregroundColor(.black)
                     .bold()
                     .font(.title)
@@ -28,8 +28,9 @@ struct ContentView: View {
                 
                 WordListView(words: words)
                 
+                
                 // Need to add additional stying here
-                Text("Current Word is:")
+                
                 CurrentWordView(currentWord: currentWord)
                 
                 ScoreView(score: score)
