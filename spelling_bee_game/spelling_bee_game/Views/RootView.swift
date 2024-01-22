@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct RootView: View {
+    @EnvironmentObject var gameManager : GameManager
+    
     var foundWords: [String] = ["pants", "span", "stat"]
     var letters: [String] = ["a", "t", "s", "p", "n"]
     var currentLetters: [String] = ["a", "n", "t"]
@@ -21,19 +23,27 @@ struct RootView: View {
                 GameTitleView()
                 Spacer()
                     .frame(height: 20)
-                CurrentScoreView(score: score)
+//                CurrentScoreView(score: score)
+                CurrentScoreView()
                 Spacer()
                     .frame(height: 100)
                 
-                FoundWordsView(foundWords: foundWords)
+//                FoundWordsView(foundWords: foundWords)
+                FoundWordsView()
                 
-                CurrentLettersView(currentLetters: currentLetters)
+//                CurrentLettersView(currentLetters: currentLetters)
+                CurrentLettersView(currentLetters: gameManager.currentWord)
+                
                 Spacer()
                     .frame(height: 20)
-                KeyboardView(possibleLetters: letters, letterSize: CGFloat(35))
+                
+//                KeyboardView(possibleLetters: letters, letterSize: CGFloat(35))
+                KeyboardView(letterSize: CGFloat(35))
+                
                 Spacer()
                     .frame(height: 60)
-                ActionButtons()
+                
+                ActionButtonsView()
                 
             }
         }
@@ -42,4 +52,5 @@ struct RootView: View {
 
 #Preview {
     RootView()
+        .environmentObject(GameManager())
 }

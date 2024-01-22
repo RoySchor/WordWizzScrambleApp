@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CurrentScoreView: View {
-    var score: Int
+    @EnvironmentObject var gameManager : GameManager
+//    var score: Int
     
     var body: some View {
-        Text("Score: \(score)")
+        Text("Score: \(gameManager.score)")
             .bold()
             .font(.title)
             .frame(maxWidth: .infinity, maxHeight: 20)
@@ -19,5 +20,6 @@ struct CurrentScoreView: View {
 }
 
 #Preview {
-    CurrentScoreView(score: 5)
+    CurrentScoreView()
+        .environmentObject(GameManager())
 }

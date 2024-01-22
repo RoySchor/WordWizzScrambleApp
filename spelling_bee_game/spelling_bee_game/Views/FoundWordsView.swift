@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct FoundWordsView: View {
-    var foundWords: [String]
+    @EnvironmentObject var gameManager : GameManager
+//    var foundWords: [String]
     
     var body: some View {
         VStack{
@@ -16,7 +17,7 @@ struct FoundWordsView: View {
                 
                 HStack(alignment: .center, spacing: 15) {
                     
-                    ForEach(foundWords, id: \.self) { word in
+                    ForEach(gameManager.foundWords, id: \.self) { word in
                         Text(word)
                             .font(.system(size: CGFloat(35)))
                             .bold()
@@ -32,5 +33,6 @@ struct FoundWordsView: View {
 }
 
 #Preview {
-    FoundWordsView(foundWords: ["pants", "span", "stat"])
+    FoundWordsView()
+        .environmentObject(GameManager())
 }

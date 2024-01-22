@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct LettersButtonView: View {
+    @EnvironmentObject var gameManager : GameManager
+    
     var letter: String
     var letterSize: CGFloat
     
     var body: some View {
         Button {
-            // add functionality of what happens when you
-            // you press this will be in view model
+            gameManager.addLetter(letter: letter)
         } label: {
             Text(letter)
                 .font(.system(size: letterSize))
@@ -30,4 +31,5 @@ struct LettersButtonView: View {
 
 #Preview {
     LettersButtonView(letter: "a", letterSize: CGFloat(35))
+        .environmentObject(GameManager())
 }

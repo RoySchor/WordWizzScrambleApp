@@ -1,5 +1,5 @@
 //
-//  ActionButtons.swift
+//  ActionButtonsView.swift
 //  spelling_bee_game
 //
 //  Created by Roy Schor on 1/22/24.
@@ -7,11 +7,13 @@
 
 import SwiftUI
 
-struct ActionButtons: View {
+struct ActionButtonsView: View {
+    @EnvironmentObject var gameManager : GameManager
+    
     var body: some View {
         HStack(spacing: 10) {
             Button {
-                
+                gameManager.shuffleLetters()
             } label: {
                 Image(systemName: "shuffle")
                     .font(.system(size: 30, weight: .heavy))
@@ -50,7 +52,7 @@ struct ActionButtons: View {
             Spacer()
                 .frame(width: 10)
             Button {
-                
+                gameManager.newGame()
             } label: {
                 Image(systemName: "arrow.counterclockwise.circle")
                     .font(.system(size: 40, weight: .heavy))
@@ -65,5 +67,6 @@ struct ActionButtons: View {
 }
 
 #Preview {
-    ActionButtons()
+    ActionButtonsView()
+        .environmentObject(GameManager())
 }

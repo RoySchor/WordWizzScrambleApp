@@ -12,6 +12,7 @@ struct spelling_bee_gameApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
+                .environmentObject(GameManager())
         }
     }
 }

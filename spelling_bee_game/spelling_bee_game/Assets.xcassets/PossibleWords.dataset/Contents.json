@@ -2,7 +2,8 @@
   "data" : [
     {
       "filename" : "Words.swift",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "universal-type-identifier" : "public.swift-source"
     }
   ],
   "info" : {

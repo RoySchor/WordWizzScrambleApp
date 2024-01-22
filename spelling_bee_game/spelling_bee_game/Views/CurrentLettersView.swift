@@ -11,7 +11,7 @@ struct CurrentLettersView: View {
     var currentLetters: [String]
     
     var body: some View {
-        HStack(spacing: 55) {
+        HStack(spacing: 45) {
             ForEach(currentLetters, id: \.self) {
                 letter in
                 Text(String(letter))
