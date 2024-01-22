@@ -18,19 +18,22 @@ struct RootView: View {
             Color(Constants.BackgroundColorName.bkColor)
                 .ignoresSafeArea()
             VStack {
-                
-//                Spacer().frame(maxWidth: .infinity, minHeight: 10, maxHeight: 10).background(Color(Constants.BackgroundColorName.bkColor))
-//               Spacer().frame(maxWidth: .infinity, minHeight: 10, maxHeight: 10)
                 GameTitleView()
-                
+                Spacer()
+                    .frame(height: 20)
                 CurrentScoreView(score: score)
-                
-                Spacer().frame(maxWidth: .infinity, maxHeight: 100)
+                Spacer()
+                    .frame(height: 100)
                 
                 FoundWordsView(foundWords: foundWords)
                 
                 CurrentLettersView(currentLetters: currentLetters)
-                
+                Spacer()
+                    .frame(height: 20)
+                KeyboardView(possibleLetters: letters, letterSize: CGFloat(35))
+                Spacer()
+                    .frame(height: 60)
+                ActionButtons()
                 
             }
         }

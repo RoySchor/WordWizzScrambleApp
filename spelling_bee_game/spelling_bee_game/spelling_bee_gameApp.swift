@@ -11,7 +11,7 @@ import SwiftUI
 struct spelling_bee_gameApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }

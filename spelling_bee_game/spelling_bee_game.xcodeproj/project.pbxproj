@@ -8,22 +8,20 @@
 
 /* Begin PBXBuildFile section */
 		9C00075E2B55EC18002325DF /* spelling_bee_gameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00075D2B55EC18002325DF /* spelling_bee_gameApp.swift */; };
-		9C0007602B55EC18002325DF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00075F2B55EC18002325DF /* ContentView.swift */; };
 		9C0007622B55EC20002325DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0007612B55EC20002325DF /* Assets.xcassets */; };
 		9C0007652B55EC20002325DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0007642B55EC20002325DF /* Preview Assets.xcassets */; };
 		9C00076F2B55EC20002325DF /* spelling_bee_gameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00076E2B55EC20002325DF /* spelling_bee_gameTests.swift */; };
 		9C0007792B55EC21002325DF /* spelling_bee_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007782B55EC21002325DF /* spelling_bee_gameUITests.swift */; };
 		9C00077B2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00077A2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift */; };
 		9C0007A22B56AC05002325DF /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A12B56AC05002325DF /* constants.swift */; };
-		9C0007A42B56CC16002325DF /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A32B56CC16002325DF /* WordListView.swift */; };
-		9C0007A62B56CCD0002325DF /* CurrentWordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A52B56CCD0002325DF /* CurrentWordView.swift */; };
-		9C0007A82B56CD94002325DF /* LetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A72B56CD94002325DF /* LetterButtonView.swift */; };
-		9C0007AA2B56CDE7002325DF /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A92B56CDE7002325DF /* ScoreView.swift */; };
 		9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA22B5DE135009E366D /* RootView.swift */; };
 		9CBBEBA52B5DEA55009E366D /* GameTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA42B5DEA55009E366D /* GameTitleView.swift */; };
 		9CBBEBA72B5DEB74009E366D /* CurrentScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */; };
 		9CBBEBA92B5DF352009E366D /* FoundWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA82B5DF352009E366D /* FoundWordsView.swift */; };
 		9CBBEBAB2B5DF6CB009E366D /* CurrentLettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAA2B5DF6CB009E366D /* CurrentLettersView.swift */; };
+		9CBBEBAD2B5DFD7D009E366D /* LettersButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAC2B5DFD7D009E366D /* LettersButtonView.swift */; };
+		9CBBEBAF2B5E0464009E366D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAE2B5E0463009E366D /* KeyboardView.swift */; };
+		9CBBEBB32B5E3DCD009E366D /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB22B5E3DCD009E366D /* ActionButtons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,7 +44,6 @@
 /* Begin PBXFileReference section */
 		9C00075A2B55EC18002325DF /* spelling_bee_game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spelling_bee_game.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C00075D2B55EC18002325DF /* spelling_bee_gameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameApp.swift; sourceTree = "<group>"; };
-		9C00075F2B55EC18002325DF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		9C0007612B55EC20002325DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0007642B55EC20002325DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C00076A2B55EC20002325DF /* spelling_bee_gameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spelling_bee_gameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -55,15 +52,14 @@
 		9C0007782B55EC21002325DF /* spelling_bee_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameUITests.swift; sourceTree = "<group>"; };
 		9C00077A2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9C0007A12B56AC05002325DF /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
-		9C0007A32B56CC16002325DF /* WordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListView.swift; sourceTree = "<group>"; };
-		9C0007A52B56CCD0002325DF /* CurrentWordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWordView.swift; sourceTree = "<group>"; };
-		9C0007A72B56CD94002325DF /* LetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LetterButtonView.swift; sourceTree = "<group>"; };
-		9C0007A92B56CDE7002325DF /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		9CBBEBA22B5DE135009E366D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9CBBEBA42B5DEA55009E366D /* GameTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTitleView.swift; sourceTree = "<group>"; };
 		9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentScoreView.swift; sourceTree = "<group>"; };
 		9CBBEBA82B5DF352009E366D /* FoundWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundWordsView.swift; sourceTree = "<group>"; };
 		9CBBEBAA2B5DF6CB009E366D /* CurrentLettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLettersView.swift; sourceTree = "<group>"; };
+		9CBBEBAC2B5DFD7D009E366D /* LettersButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersButtonView.swift; sourceTree = "<group>"; };
+		9CBBEBAE2B5E0463009E366D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		9CBBEBB22B5E3DCD009E366D /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,11 +114,6 @@
 				9CBBEBA02B5DDDA5009E366D /* ViewModel */,
 				9CBBEB9E2B5DDD8B009E366D /* Views */,
 				9C00075D2B55EC18002325DF /* spelling_bee_gameApp.swift */,
-				9C00075F2B55EC18002325DF /* ContentView.swift */,
-				9C0007A72B56CD94002325DF /* LetterButtonView.swift */,
-				9C0007A92B56CDE7002325DF /* ScoreView.swift */,
-				9C0007A52B56CCD0002325DF /* CurrentWordView.swift */,
-				9C0007A32B56CC16002325DF /* WordListView.swift */,
 				9C0007612B55EC20002325DF /* Assets.xcassets */,
 				9C0007632B55EC20002325DF /* Preview Content */,
 				9C0007A12B56AC05002325DF /* constants.swift */,
@@ -163,6 +154,9 @@
 				9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */,
 				9CBBEBA82B5DF352009E366D /* FoundWordsView.swift */,
 				9CBBEBAA2B5DF6CB009E366D /* CurrentLettersView.swift */,
+				9CBBEBAC2B5DFD7D009E366D /* LettersButtonView.swift */,
+				9CBBEBAE2B5E0463009E366D /* KeyboardView.swift */,
+				9CBBEBB22B5E3DCD009E366D /* ActionButtons.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -313,15 +307,13 @@
 			files = (
 				9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */,
 				9CBBEBA92B5DF352009E366D /* FoundWordsView.swift in Sources */,
+				9CBBEBB32B5E3DCD009E366D /* ActionButtons.swift in Sources */,
 				9CBBEBAB2B5DF6CB009E366D /* CurrentLettersView.swift in Sources */,
 				9CBBEBA72B5DEB74009E366D /* CurrentScoreView.swift in Sources */,
-				9C0007A42B56CC16002325DF /* WordListView.swift in Sources */,
-				9C0007602B55EC18002325DF /* ContentView.swift in Sources */,
 				9C00075E2B55EC18002325DF /* spelling_bee_gameApp.swift in Sources */,
 				9C0007A22B56AC05002325DF /* constants.swift in Sources */,
-				9C0007AA2B56CDE7002325DF /* ScoreView.swift in Sources */,
-				9C0007A82B56CD94002325DF /* LetterButtonView.swift in Sources */,
-				9C0007A62B56CCD0002325DF /* CurrentWordView.swift in Sources */,
+				9CBBEBAF2B5E0464009E366D /* KeyboardView.swift in Sources */,
+				9CBBEBAD2B5DFD7D009E366D /* LettersButtonView.swift in Sources */,
 				9CBBEBA52B5DEA55009E366D /* GameTitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

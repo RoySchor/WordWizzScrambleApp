@@ -10,6 +10,7 @@ import SwiftUI
 struct GameTitleView: View {
     var body: some View {        
         HStack(spacing: 20) {
+            Text(" ")
             ForEach(Array("Lion Spell".enumerated()), id: \.offset) { (offset, letter) in
                 Text(String(letter))
                     .font(.largeTitle)
@@ -17,6 +18,7 @@ struct GameTitleView: View {
                     .foregroundStyle(.white)
                     .frame(width: .infinity, height: 50)
             }
+            Text(" ")
         }
         .background(Color(red: 74/253, green: 161/253, blue: 212/253).gradient)
     }

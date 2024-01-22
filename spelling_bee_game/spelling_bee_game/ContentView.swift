@@ -25,15 +25,8 @@ struct ContentView: View {
                     .font(.title)
                     .frame(width: 500, height: 100)
                 Spacer()
-                
-                WordListView(words: words)
-                
-                
-                // Need to add additional stying here
-                
-                CurrentWordView(currentWord: currentWord)
-                
-                ScoreView(score: score)
+                                
+                                                
             }
         }
     }

@@ -14,10 +14,11 @@ struct FoundWordsView: View {
         VStack{
             ScrollView(.horizontal, showsIndicators: false) {
                 
-                HStack(alignment: .center, spacing: 5) {
+                HStack(alignment: .center, spacing: 15) {
                     
                     ForEach(foundWords, id: \.self) { word in
                         Text(word)
+                            .font(.system(size: CGFloat(35)))
                             .bold()
                             .padding(.leading)
                     }
