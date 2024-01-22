@@ -23,6 +23,7 @@
 		9CBBEBAF2B5E0464009E366D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAE2B5E0463009E366D /* KeyboardView.swift */; };
 		9CBBEBB32B5E3DCD009E366D /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB22B5E3DCD009E366D /* ActionButtons.swift */; };
 		9CBBEBB52B5ED635009E366D /* WordScrambling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB42B5ED635009E366D /* WordScrambling.swift */; };
+		9CBBEBB92B5EEFD7009E366D /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB82B5EEFD7009E366D /* GameManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		9CBBEBAE2B5E0463009E366D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		9CBBEBB22B5E3DCD009E366D /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
 		9CBBEBB42B5ED635009E366D /* WordScrambling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambling.swift; sourceTree = SOURCE_ROOT; };
+		9CBBEBB82B5EEFD7009E366D /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,12 +115,12 @@
 			isa = PBXGroup;
 			children = (
 				9CBBEBA12B5DDDB2009E366D /* Model */,
-				9CBBEBA02B5DDDA5009E366D /* ViewModel */,
 				9CBBEB9E2B5DDD8B009E366D /* Views */,
 				9C00075D2B55EC18002325DF /* spelling_bee_gameApp.swift */,
 				9C0007612B55EC20002325DF /* Assets.xcassets */,
 				9C0007632B55EC20002325DF /* Preview Content */,
 				9C0007A12B56AC05002325DF /* constants.swift */,
+				9CBBEBBA2B5EEFDD009E366D /* ViewModel */,
 			);
 			path = spelling_bee_game;
 			sourceTree = "<group>";
@@ -163,19 +165,20 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		9CBBEBA02B5DDDA5009E366D /* ViewModel */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
 		9CBBEBA12B5DDDB2009E366D /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				9CBBEBB42B5ED635009E366D /* WordScrambling.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		9CBBEBBA2B5EEFDD009E366D /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9CBBEBB82B5EEFD7009E366D /* GameManager.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -309,6 +312,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */,
+				9CBBEBB92B5EEFD7009E366D /* GameManager.swift in Sources */,
 				9CBBEBA92B5DF352009E366D /* FoundWordsView.swift in Sources */,
 				9CBBEBB32B5E3DCD009E366D /* ActionButtons.swift in Sources */,
 				9CBBEBB52B5ED635009E366D /* WordScrambling.swift in Sources */,
