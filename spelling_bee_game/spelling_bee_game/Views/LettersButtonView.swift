@@ -11,14 +11,13 @@ struct LettersButtonView: View {
     @EnvironmentObject var gameManager : GameManager
     
     var letter: String
-    var letterSize: CGFloat
     
     var body: some View {
         Button {
             gameManager.addLetter(letter: letter)
         } label: {
             Text(letter)
-                .font(.system(size: letterSize))
+                .font(.system(size: CGFloat(35)))
                 .bold()
                 .frame(width: 45, height: 55)
                 .background(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
@@ -30,6 +29,6 @@ struct LettersButtonView: View {
 }
 
 #Preview {
-    LettersButtonView(letter: "a", letterSize: CGFloat(35))
+    LettersButtonView(letter: "a")
         .environmentObject(GameManager())
 }

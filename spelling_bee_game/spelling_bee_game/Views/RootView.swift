@@ -21,24 +21,20 @@ struct RootView: View {
                 .ignoresSafeArea()
             VStack {
                 GameTitleView()
+                
                 Spacer()
                     .frame(height: 20)
-//                CurrentScoreView(score: score)
                 CurrentScoreView()
                 Spacer()
                     .frame(height: 100)
-                
-//                FoundWordsView(foundWords: foundWords)
                 FoundWordsView()
                 
-//                CurrentLettersView(currentLetters: currentLetters)
                 CurrentLettersView(currentLetters: gameManager.currentWord)
                 
                 Spacer()
                     .frame(height: 20)
                 
-//                KeyboardView(possibleLetters: letters, letterSize: CGFloat(35))
-                KeyboardView(letterSize: CGFloat(35))
+                KeyboardView()
                 
                 Spacer()
                     .frame(height: 60)

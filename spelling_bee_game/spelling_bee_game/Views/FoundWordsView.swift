@@ -9,7 +9,6 @@ import SwiftUI
 
 struct FoundWordsView: View {
     @EnvironmentObject var gameManager : GameManager
-//    var foundWords: [String]
     
     var body: some View {
         VStack{

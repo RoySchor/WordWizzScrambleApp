@@ -24,7 +24,7 @@
 		9CBBEBB32B5E3DCD009E366D /* ActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB22B5E3DCD009E366D /* ActionButtonsView.swift */; };
 		9CBBEBB52B5ED635009E366D /* WordScrambling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB42B5ED635009E366D /* WordScrambling.swift */; };
 		9CBBEBB92B5EEFD7009E366D /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB82B5EEFD7009E366D /* GameManager.swift */; };
-		9CBBEBBC2B5EFF59009E366D /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBBB2B5EFF59009E366D /* Words.swift */; };
+		9CBBEBBE2B5F22EA009E366D /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBBD2B5F22EA009E366D /* Words.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		9CBBEBB22B5E3DCD009E366D /* ActionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonsView.swift; sourceTree = "<group>"; };
 		9CBBEBB42B5ED635009E366D /* WordScrambling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambling.swift; sourceTree = SOURCE_ROOT; };
 		9CBBEBB82B5EEFD7009E366D /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
-		9CBBEBBB2B5EFF59009E366D /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Words.swift; path = Assets.xcassets/PossibleWords.dataset/Words.swift; sourceTree = "<group>"; };
+		9CBBEBBD2B5F22EA009E366D /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +116,7 @@
 		9C00075C2B55EC18002325DF /* spelling_bee_game */ = {
 			isa = PBXGroup;
 			children = (
-				9CBBEBBB2B5EFF59009E366D /* Words.swift */,
+				9CBBEBBD2B5F22EA009E366D /* Words.swift */,
 				9CBBEBA12B5DDDB2009E366D /* Model */,
 				9CBBEB9E2B5DDD8B009E366D /* Views */,
 				9C00075D2B55EC18002325DF /* spelling_bee_gameApp.swift */,
@@ -324,7 +324,7 @@
 				9C00075E2B55EC18002325DF /* spelling_bee_gameApp.swift in Sources */,
 				9C0007A22B56AC05002325DF /* constants.swift in Sources */,
 				9CBBEBAF2B5E0464009E366D /* KeyboardView.swift in Sources */,
-				9CBBEBBC2B5EFF59009E366D /* Words.swift in Sources */,
+				9CBBEBBE2B5F22EA009E366D /* Words.swift in Sources */,
 				9CBBEBAD2B5DFD7D009E366D /* LettersButtonView.swift in Sources */,
 				9CBBEBA52B5DEA55009E366D /* GameTitleView.swift in Sources */,
 			);

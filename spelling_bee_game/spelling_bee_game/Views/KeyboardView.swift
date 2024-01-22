@@ -9,15 +9,11 @@ import SwiftUI
 
 struct KeyboardView: View {
     @EnvironmentObject var gameManager : GameManager
-    
-//    var possibleLetters: [String]
-    var letterSize: CGFloat
-    
+        
     var body: some View {
         VStack {
             HStack(spacing: 15) {
-//                ForEach(possibleLetters, id: \.self) { letter in LettersButtonView(letter: letter, letterSize: letterSize)}
-                ForEach(gameManager.letters, id: \.self) { letter in LettersButtonView(letter: letter, letterSize: letterSize)}
+                ForEach(gameManager.letters, id: \.self) { letter in LettersButtonView(letter: letter)}
             }
             
             Spacer()
@@ -32,9 +28,8 @@ struct KeyboardView: View {
                         .bold()
                         .frame(width: 80, height: 55)
                         .foregroundColor(.primary)
-//                        .foregroundColor(gameManager.isWordValid ? Color.green : Color.primary)
                         .background(gameManager.isWordValid ? Color.green.gradient : Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
-                        .opacity((gameManager.currentWord.count < 4) ? 0.6 : 1)
+                        .opacity((gameManager.currentWord.count < 4 || !gameManager.isWordValid) ? 0.6 : 1)
                         .cornerRadius(15)
                 }
                 .disabled(!gameManager.isWordValid)
@@ -61,6 +56,6 @@ struct KeyboardView: View {
 }
 
 #Preview {
-    KeyboardView(letterSize: CGFloat(35))
+    KeyboardView()
         .environmentObject(GameManager())
 }

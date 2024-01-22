@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CurrentScoreView: View {
     @EnvironmentObject var gameManager : GameManager
-//    var score: Int
     
     var body: some View {
         Text("Score: \(gameManager.score)")

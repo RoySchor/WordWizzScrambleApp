@@ -12,8 +12,14 @@ struct CurrentLettersView: View {
     
     var body: some View {
         HStack(spacing: 45) {
-            ForEach(currentLetters, id: \.self) {
-                letter in
+//            ForEach(currentLetters, id: \.self) {
+//                letter in
+//                Text(String(letter))
+//                    .font(.largeTitle)
+//                    .bold()
+//            }
+            ForEach(Array(currentLetters.enumerated()), id: \.offset) {
+                index, letter in
                 Text(String(letter))
                     .font(.largeTitle)
                     .bold()
