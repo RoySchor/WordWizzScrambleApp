@@ -22,6 +22,7 @@
 		9CBBEBAD2B5DFD7D009E366D /* LettersButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAC2B5DFD7D009E366D /* LettersButtonView.swift */; };
 		9CBBEBAF2B5E0464009E366D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAE2B5E0463009E366D /* KeyboardView.swift */; };
 		9CBBEBB32B5E3DCD009E366D /* ActionButtons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB22B5E3DCD009E366D /* ActionButtons.swift */; };
+		9CBBEBB52B5ED635009E366D /* WordScrambling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB42B5ED635009E366D /* WordScrambling.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		9CBBEBAC2B5DFD7D009E366D /* LettersButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersButtonView.swift; sourceTree = "<group>"; };
 		9CBBEBAE2B5E0463009E366D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
 		9CBBEBB22B5E3DCD009E366D /* ActionButtons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtons.swift; sourceTree = "<group>"; };
+		9CBBEBB42B5ED635009E366D /* WordScrambling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambling.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,6 +173,7 @@
 		9CBBEBA12B5DDDB2009E366D /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				9CBBEBB42B5ED635009E366D /* WordScrambling.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -308,6 +311,7 @@
 				9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */,
 				9CBBEBA92B5DF352009E366D /* FoundWordsView.swift in Sources */,
 				9CBBEBB32B5E3DCD009E366D /* ActionButtons.swift in Sources */,
+				9CBBEBB52B5ED635009E366D /* WordScrambling.swift in Sources */,
 				9CBBEBAB2B5DF6CB009E366D /* CurrentLettersView.swift in Sources */,
 				9CBBEBA72B5DEB74009E366D /* CurrentScoreView.swift in Sources */,
 				9C00075E2B55EC18002325DF /* spelling_bee_gameApp.swift in Sources */,

@@ -16,7 +16,7 @@ struct GameTitleView: View {
                     .font(.largeTitle)
                     .bold()
                     .foregroundStyle(.white)
-                    .frame(width: .infinity, height: 50)
+                    .frame(height: 50)
             }
             Text(" ")
         }

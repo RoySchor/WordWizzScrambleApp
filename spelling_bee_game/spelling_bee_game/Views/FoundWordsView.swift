@@ -24,7 +24,7 @@ struct FoundWordsView: View {
                     }
                 }
             }
-            .frame(width: .infinity, height: 150)
+            .frame(maxWidth: .infinity, maxHeight: 150)
             .border(Color.black, width: 2)
             .background(Color(Constants.FoundWordsBackgroundColorName.bkColor))
         }

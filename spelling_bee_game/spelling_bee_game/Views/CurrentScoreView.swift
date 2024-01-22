@@ -14,7 +14,7 @@ struct CurrentScoreView: View {
         Text("Score: \(score)")
             .bold()
             .font(.title)
-            .frame(width: .infinity, height: 20)
+            .frame(maxWidth: .infinity, maxHeight: 20)
     }
 }
 

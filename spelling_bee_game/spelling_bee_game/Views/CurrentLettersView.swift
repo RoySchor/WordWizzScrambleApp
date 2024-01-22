@@ -21,7 +21,6 @@ struct CurrentLettersView: View {
             
         }
         .frame(maxWidth: .infinity, maxHeight: 100)
-//        .background(Color(red: 74/253, green: 161/253, blue: 212/253).gradient)
     }
 }
 
