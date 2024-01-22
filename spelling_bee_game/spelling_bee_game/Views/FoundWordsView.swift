@@ -11,23 +11,6 @@ struct FoundWordsView: View {
     @EnvironmentObject var gameManager : GameManager
     
     var body: some View {
-//        VStack{
-//            ScrollView(.horizontal, showsIndicators: false) {
-//                
-//                HStack(alignment: .center, spacing: 15) {
-//                    
-//                    ForEach(gameManager.foundWords, id: \.self) { word in
-//                        Text(word)
-//                            .font(.system(size: CGFloat(35)))
-//                            .bold()
-//                            .padding(.leading)
-//                    }
-//                }
-//            }
-//            .frame(maxWidth: .infinity, maxHeight: 150)
-//            .border(Color.black, width: 2)
-//            .background(Color(Constants.FoundWordsBackgroundColorName.bkColor))
-//        }
         VStack{
             ScrollViewReader { proxy in
                 ScrollView(.horizontal, showsIndicators: false) {
