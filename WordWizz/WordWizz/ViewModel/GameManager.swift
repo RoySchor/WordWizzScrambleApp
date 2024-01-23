@@ -13,6 +13,7 @@ class GameManager: ObservableObject {
     @Published var foundWords: [String] = []
     @Published var score: Int = 0
     @Published var isWordValid: Bool = false
+    @Published var message: String? = nil
     
     init() {
         generateNewLetters()
@@ -31,12 +32,18 @@ class GameManager: ObservableObject {
     }
 
     func submitWord() {
+        let joinedWord = currentWord.joined()
 //        if word is valid and wasn't already found then submit it
-        if isWordValid && !foundWords.contains(currentWord) {
-            foundWords.append(currentWord.joined())
-            updateScore()
-            currentWord = []
-            isWordValid = false
+        if isWordValid {
+            if !foundWords.contains(joinedWord) {
+                foundWords.append(joinedWord)
+                updateScore()
+                currentWord = []
+                isWordValid = false
+                message = nil
+            } else {
+                showMessage("Word Already Found 😊")
+            }
         }
     }
     
@@ -87,5 +94,12 @@ class GameManager: ObservableObject {
 //    Check if the word is a pangram, contains all letters
     private func isPangram(word: [String]) -> Bool {
         return Set(word).count == letters.count
+    }
+    
+    private func showMessage(_ message: String, duration: TimeInterval = 2.0) {
+        self.message = message
+        DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
+            self.message = nil
+        }
     }
 }

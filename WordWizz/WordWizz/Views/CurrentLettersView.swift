@@ -11,7 +11,7 @@ struct CurrentLettersView: View {
     var currentLetters: [String]
     
     var body: some View {
-        HStack(spacing: 45) {
+        HStack(spacing: 30) {
             ForEach(Array(currentLetters.enumerated()), id: \.offset) {
                 index, letter in
                 Text(String(letter))

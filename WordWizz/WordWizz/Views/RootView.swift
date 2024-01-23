@@ -36,6 +36,16 @@ struct RootView: View {
                 ActionButtonsView()
                 
             }
+            if let message = gameManager.message {
+                Text(message)
+                    .foregroundColor(.red)
+                    .font(.headline)
+                    .padding()
+                    .background(Color.white.opacity(0.8))
+                    .cornerRadius(8)
+                    .transition(.opacity)
+                    .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 5)
+            }
         }
     }
 }

@@ -11,7 +11,7 @@ struct GameTitleView: View {
     var body: some View {        
         HStack(spacing: 20) {
             Text(" ")
-            ForEach(Array("Lion Spell".enumerated()), id: \.offset) { (offset, letter) in
+            ForEach(Array("Word Wizz".enumerated()), id: \.offset) { (offset, letter) in
                 Text(String(letter))
                     .font(.largeTitle)
                     .bold()
