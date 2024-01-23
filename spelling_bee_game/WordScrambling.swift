@@ -7,8 +7,6 @@
 
 import Foundation
 
-//enum
-
 struct ScrambleGame {
     var numLetters: Int
     var letters: [String]
@@ -24,5 +22,3 @@ struct ScrambleGame {
         self.score = 0
     }
 }
-
-let testGame = ScrambleGame(numLetters: 5, letters: ["a", "t", "s", "p", "n"])

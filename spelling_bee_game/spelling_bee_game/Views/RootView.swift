@@ -10,11 +10,6 @@ import SwiftUI
 struct RootView: View {
     @EnvironmentObject var gameManager : GameManager
     
-    var foundWords: [String] = ["pants", "span", "stat"]
-    var letters: [String] = ["a", "t", "s", "p", "n"]
-    var currentLetters: [String] = ["a", "n", "t"]
-    var score: Int = 3
-    
     var body: some View {
         ZStack {
             Color(Constants.BackgroundColorName.bkColor)
