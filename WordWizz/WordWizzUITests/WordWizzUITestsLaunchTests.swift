@@ -1,13 +1,13 @@
 //
-//  spelling_bee_gameUITestsLaunchTests.swift
-//  spelling_bee_gameUITests
+//  WordWizzUITestsLaunchTests.swift
+//  WordWizzUITests
 //
 //  Created by Roy Schor on 1/15/24.
 //
 
 import XCTest
 
-final class spelling_bee_gameUITestsLaunchTests: XCTestCase {
+final class WordWizzUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true

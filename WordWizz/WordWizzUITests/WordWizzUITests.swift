@@ -1,13 +1,13 @@
 //
-//  spelling_bee_gameUITests.swift
-//  spelling_bee_gameUITests
+//  WordWizzUITests.swift
+//  WordWizzUITests
 //
 //  Created by Roy Schor on 1/15/24.
 //
 
 import XCTest
 
-final class spelling_bee_gameUITests: XCTestCase {
+final class WordWizzUITests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

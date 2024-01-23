@@ -1,14 +1,14 @@
 //
-//  spelling_bee_gameTests.swift
-//  spelling_bee_gameTests
+//  WordWizzTests.swift
+//  WordWizzTests
 //
 //  Created by Roy Schor on 1/15/24.
 //
 
 import XCTest
-@testable import spelling_bee_game
+@testable import WordWizz
 
-final class spelling_bee_gameTests: XCTestCase {
+final class WordWizzTests: XCTestCase {
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.

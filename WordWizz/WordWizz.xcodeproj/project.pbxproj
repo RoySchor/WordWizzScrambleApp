@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9C00075E2B55EC18002325DF /* spelling_bee_gameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00075D2B55EC18002325DF /* spelling_bee_gameApp.swift */; };
+		9C00075E2B55EC18002325DF /* WordWizzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00075D2B55EC18002325DF /* WordWizzApp.swift */; };
 		9C0007622B55EC20002325DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0007612B55EC20002325DF /* Assets.xcassets */; };
 		9C0007652B55EC20002325DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0007642B55EC20002325DF /* Preview Assets.xcassets */; };
-		9C00076F2B55EC20002325DF /* spelling_bee_gameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00076E2B55EC20002325DF /* spelling_bee_gameTests.swift */; };
-		9C0007792B55EC21002325DF /* spelling_bee_gameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007782B55EC21002325DF /* spelling_bee_gameUITests.swift */; };
-		9C00077B2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00077A2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift */; };
+		9C00076F2B55EC20002325DF /* WordWizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00076E2B55EC20002325DF /* WordWizzTests.swift */; };
+		9C0007792B55EC21002325DF /* WordWizzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007782B55EC21002325DF /* WordWizzUITests.swift */; };
+		9C00077B2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00077A2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift */; };
 		9C0007A22B56AC05002325DF /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A12B56AC05002325DF /* constants.swift */; };
 		9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA22B5DE135009E366D /* RootView.swift */; };
 		9CBBEBA52B5DEA55009E366D /* GameTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA42B5DEA55009E366D /* GameTitleView.swift */; };
@@ -45,15 +45,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9C00075A2B55EC18002325DF /* spelling_bee_game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = spelling_bee_game.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C00075D2B55EC18002325DF /* spelling_bee_gameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameApp.swift; sourceTree = "<group>"; };
+		9C00075A2B55EC18002325DF /* WordWizz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordWizz.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C00075D2B55EC18002325DF /* WordWizzApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordWizzApp.swift; sourceTree = "<group>"; };
 		9C0007612B55EC20002325DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0007642B55EC20002325DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		9C00076A2B55EC20002325DF /* spelling_bee_gameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spelling_bee_gameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C00076E2B55EC20002325DF /* spelling_bee_gameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameTests.swift; sourceTree = "<group>"; };
-		9C0007742B55EC20002325DF /* spelling_bee_gameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = spelling_bee_gameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C0007782B55EC21002325DF /* spelling_bee_gameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameUITests.swift; sourceTree = "<group>"; };
-		9C00077A2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spelling_bee_gameUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9C00076A2B55EC20002325DF /* WordWizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordWizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C00076E2B55EC20002325DF /* WordWizzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordWizzTests.swift; sourceTree = "<group>"; };
+		9C0007742B55EC20002325DF /* WordWizzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordWizzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C0007782B55EC21002325DF /* WordWizzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordWizzUITests.swift; sourceTree = "<group>"; };
+		9C00077A2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordWizzUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9C0007A12B56AC05002325DF /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		9CBBEBA22B5DE135009E366D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9CBBEBA42B5DEA55009E366D /* GameTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTitleView.swift; sourceTree = "<group>"; };
@@ -96,9 +96,9 @@
 		9C0007512B55EC17002325DF = {
 			isa = PBXGroup;
 			children = (
-				9C00075C2B55EC18002325DF /* spelling_bee_game */,
-				9C00076D2B55EC20002325DF /* spelling_bee_gameTests */,
-				9C0007772B55EC21002325DF /* spelling_bee_gameUITests */,
+				9C00075C2B55EC18002325DF /* WordWizz */,
+				9C00076D2B55EC20002325DF /* WordWizzTests */,
+				9C0007772B55EC21002325DF /* WordWizzUITests */,
 				9C00075B2B55EC18002325DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -106,26 +106,26 @@
 		9C00075B2B55EC18002325DF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				9C00075A2B55EC18002325DF /* spelling_bee_game.app */,
-				9C00076A2B55EC20002325DF /* spelling_bee_gameTests.xctest */,
-				9C0007742B55EC20002325DF /* spelling_bee_gameUITests.xctest */,
+				9C00075A2B55EC18002325DF /* WordWizz.app */,
+				9C00076A2B55EC20002325DF /* WordWizzTests.xctest */,
+				9C0007742B55EC20002325DF /* WordWizzUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		9C00075C2B55EC18002325DF /* spelling_bee_game */ = {
+		9C00075C2B55EC18002325DF /* WordWizz */ = {
 			isa = PBXGroup;
 			children = (
 				9CBBEBBD2B5F22EA009E366D /* Words.swift */,
 				9CBBEBA12B5DDDB2009E366D /* Model */,
 				9CBBEB9E2B5DDD8B009E366D /* Views */,
-				9C00075D2B55EC18002325DF /* spelling_bee_gameApp.swift */,
+				9C00075D2B55EC18002325DF /* WordWizzApp.swift */,
 				9C0007612B55EC20002325DF /* Assets.xcassets */,
 				9C0007632B55EC20002325DF /* Preview Content */,
 				9C0007A12B56AC05002325DF /* constants.swift */,
 				9CBBEBBA2B5EEFDD009E366D /* ViewModel */,
 			);
-			path = spelling_bee_game;
+			path = WordWizz;
 			sourceTree = "<group>";
 		};
 		9C0007632B55EC20002325DF /* Preview Content */ = {
@@ -136,21 +136,21 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		9C00076D2B55EC20002325DF /* spelling_bee_gameTests */ = {
+		9C00076D2B55EC20002325DF /* WordWizzTests */ = {
 			isa = PBXGroup;
 			children = (
-				9C00076E2B55EC20002325DF /* spelling_bee_gameTests.swift */,
+				9C00076E2B55EC20002325DF /* WordWizzTests.swift */,
 			);
-			path = spelling_bee_gameTests;
+			path = WordWizzTests;
 			sourceTree = "<group>";
 		};
-		9C0007772B55EC21002325DF /* spelling_bee_gameUITests */ = {
+		9C0007772B55EC21002325DF /* WordWizzUITests */ = {
 			isa = PBXGroup;
 			children = (
-				9C0007782B55EC21002325DF /* spelling_bee_gameUITests.swift */,
-				9C00077A2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift */,
+				9C0007782B55EC21002325DF /* WordWizzUITests.swift */,
+				9C00077A2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift */,
 			);
-			path = spelling_bee_gameUITests;
+			path = WordWizzUITests;
 			sourceTree = "<group>";
 		};
 		9CBBEB9E2B5DDD8B009E366D /* Views */ = {
@@ -187,9 +187,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		9C0007592B55EC18002325DF /* spelling_bee_game */ = {
+		9C0007592B55EC18002325DF /* WordWizz */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C00077E2B55EC21002325DF /* Build configuration list for PBXNativeTarget "spelling_bee_game" */;
+			buildConfigurationList = 9C00077E2B55EC21002325DF /* Build configuration list for PBXNativeTarget "WordWizz" */;
 			buildPhases = (
 				9C0007562B55EC18002325DF /* Sources */,
 				9C0007572B55EC18002325DF /* Frameworks */,
@@ -199,14 +199,14 @@
 			);
 			dependencies = (
 			);
-			name = spelling_bee_game;
+			name = WordWizz;
 			productName = spelling_bee_game;
-			productReference = 9C00075A2B55EC18002325DF /* spelling_bee_game.app */;
+			productReference = 9C00075A2B55EC18002325DF /* WordWizz.app */;
 			productType = "com.apple.product-type.application";
 		};
-		9C0007692B55EC20002325DF /* spelling_bee_gameTests */ = {
+		9C0007692B55EC20002325DF /* WordWizzTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C0007812B55EC21002325DF /* Build configuration list for PBXNativeTarget "spelling_bee_gameTests" */;
+			buildConfigurationList = 9C0007812B55EC21002325DF /* Build configuration list for PBXNativeTarget "WordWizzTests" */;
 			buildPhases = (
 				9C0007662B55EC20002325DF /* Sources */,
 				9C0007672B55EC20002325DF /* Frameworks */,
@@ -217,14 +217,14 @@
 			dependencies = (
 				9C00076C2B55EC20002325DF /* PBXTargetDependency */,
 			);
-			name = spelling_bee_gameTests;
+			name = WordWizzTests;
 			productName = spelling_bee_gameTests;
-			productReference = 9C00076A2B55EC20002325DF /* spelling_bee_gameTests.xctest */;
+			productReference = 9C00076A2B55EC20002325DF /* WordWizzTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		9C0007732B55EC20002325DF /* spelling_bee_gameUITests */ = {
+		9C0007732B55EC20002325DF /* WordWizzUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C0007842B55EC21002325DF /* Build configuration list for PBXNativeTarget "spelling_bee_gameUITests" */;
+			buildConfigurationList = 9C0007842B55EC21002325DF /* Build configuration list for PBXNativeTarget "WordWizzUITests" */;
 			buildPhases = (
 				9C0007702B55EC20002325DF /* Sources */,
 				9C0007712B55EC20002325DF /* Frameworks */,
@@ -235,9 +235,9 @@
 			dependencies = (
 				9C0007762B55EC20002325DF /* PBXTargetDependency */,
 			);
-			name = spelling_bee_gameUITests;
+			name = WordWizzUITests;
 			productName = spelling_bee_gameUITests;
-			productReference = 9C0007742B55EC20002325DF /* spelling_bee_gameUITests.xctest */;
+			productReference = 9C0007742B55EC20002325DF /* WordWizzUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -263,7 +263,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 9C0007552B55EC17002325DF /* Build configuration list for PBXProject "spelling_bee_game" */;
+			buildConfigurationList = 9C0007552B55EC17002325DF /* Build configuration list for PBXProject "WordWizz" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -276,9 +276,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				9C0007592B55EC18002325DF /* spelling_bee_game */,
-				9C0007692B55EC20002325DF /* spelling_bee_gameTests */,
-				9C0007732B55EC20002325DF /* spelling_bee_gameUITests */,
+				9C0007592B55EC18002325DF /* WordWizz */,
+				9C0007692B55EC20002325DF /* WordWizzTests */,
+				9C0007732B55EC20002325DF /* WordWizzUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,7 +321,7 @@
 				9CBBEBB52B5ED635009E366D /* WordScrambling.swift in Sources */,
 				9CBBEBAB2B5DF6CB009E366D /* CurrentLettersView.swift in Sources */,
 				9CBBEBA72B5DEB74009E366D /* CurrentScoreView.swift in Sources */,
-				9C00075E2B55EC18002325DF /* spelling_bee_gameApp.swift in Sources */,
+				9C00075E2B55EC18002325DF /* WordWizzApp.swift in Sources */,
 				9C0007A22B56AC05002325DF /* constants.swift in Sources */,
 				9CBBEBAF2B5E0464009E366D /* KeyboardView.swift in Sources */,
 				9CBBEBBE2B5F22EA009E366D /* Words.swift in Sources */,
@@ -334,7 +334,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C00076F2B55EC20002325DF /* spelling_bee_gameTests.swift in Sources */,
+				9C00076F2B55EC20002325DF /* WordWizzTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,8 +342,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0007792B55EC21002325DF /* spelling_bee_gameUITests.swift in Sources */,
-				9C00077B2B55EC21002325DF /* spelling_bee_gameUITestsLaunchTests.swift in Sources */,
+				9C0007792B55EC21002325DF /* WordWizzUITests.swift in Sources */,
+				9C00077B2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -352,12 +352,12 @@
 /* Begin PBXTargetDependency section */
 		9C00076C2B55EC20002325DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9C0007592B55EC18002325DF /* spelling_bee_game */;
+			target = 9C0007592B55EC18002325DF /* WordWizz */;
 			targetProxy = 9C00076B2B55EC20002325DF /* PBXContainerItemProxy */;
 		};
 		9C0007762B55EC20002325DF /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 9C0007592B55EC18002325DF /* spelling_bee_game */;
+			target = 9C0007592B55EC18002325DF /* WordWizz */;
 			targetProxy = 9C0007752B55EC20002325DF /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -489,7 +489,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"spelling_bee_game/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WordWizz/Preview Content\"";
 				DEVELOPMENT_TEAM = AC89BD77SC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -503,7 +503,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.rps5836.spelling-bee-game";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.rps5836.WordWizz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -518,7 +518,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"spelling_bee_game/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"WordWizz/Preview Content\"";
 				DEVELOPMENT_TEAM = AC89BD77SC;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -532,7 +532,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.rps5836.spelling-bee-game";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.rps5836.WordWizz;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -551,12 +551,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.rps5836.spelling-bee-gameTests";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.rps5836.WordWizzTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spelling_bee_game.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/spelling_bee_game";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordWizz.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WordWizz";
 			};
 			name = Debug;
 		};
@@ -571,12 +571,12 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.rps5836.spelling-bee-gameTests";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.rps5836.WordWizzTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/spelling_bee_game.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/spelling_bee_game";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WordWizz.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/WordWizz";
 			};
 			name = Release;
 		};
@@ -589,12 +589,12 @@
 				DEVELOPMENT_TEAM = AC89BD77SC;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.rps5836.spelling-bee-gameUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.rps5836.WordWizzUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = spelling_bee_game;
+				TEST_TARGET_NAME = WordWizz;
 			};
 			name = Debug;
 		};
@@ -607,19 +607,19 @@
 				DEVELOPMENT_TEAM = AC89BD77SC;
 				GENERATE_INFOPLIST_FILE = YES;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "edu.psu.rps5836.spelling-bee-gameUITests";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.psu.rps5836.WordWizzUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = spelling_bee_game;
+				TEST_TARGET_NAME = WordWizz;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		9C0007552B55EC17002325DF /* Build configuration list for PBXProject "spelling_bee_game" */ = {
+		9C0007552B55EC17002325DF /* Build configuration list for PBXProject "WordWizz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C00077C2B55EC21002325DF /* Debug */,
@@ -628,7 +628,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C00077E2B55EC21002325DF /* Build configuration list for PBXNativeTarget "spelling_bee_game" */ = {
+		9C00077E2B55EC21002325DF /* Build configuration list for PBXNativeTarget "WordWizz" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C00077F2B55EC21002325DF /* Debug */,
@@ -637,7 +637,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C0007812B55EC21002325DF /* Build configuration list for PBXNativeTarget "spelling_bee_gameTests" */ = {
+		9C0007812B55EC21002325DF /* Build configuration list for PBXNativeTarget "WordWizzTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C0007822B55EC21002325DF /* Debug */,
@@ -646,7 +646,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		9C0007842B55EC21002325DF /* Build configuration list for PBXNativeTarget "spelling_bee_gameUITests" */ = {
+		9C0007842B55EC21002325DF /* Build configuration list for PBXNativeTarget "WordWizzUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				9C0007852B55EC21002325DF /* Debug */,

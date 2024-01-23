@@ -1,6 +1,6 @@
 //
 //  GameTitleView.swift
-//  spelling_bee_game
+//  WordWizz
 //
 //  Created by Roy Schor on 1/21/24.
 //

@@ -1,6 +1,6 @@
 //
-//  spelling_bee_gameApp.swift
-//  spelling_bee_game
+//  WordWizzApp.swift
+//  WordWizz
 //
 //  Created by Roy Schor on 1/15/24.
 //
@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct spelling_bee_gameApp: App {
+struct WordWizzApp: App {
     var body: some Scene {
         WindowGroup {
             RootView()
