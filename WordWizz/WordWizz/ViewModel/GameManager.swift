@@ -15,8 +15,16 @@ class GameManager: ObservableObject {
     @Published var isWordValid: Bool = false
     @Published var message: String? = nil
 
-    @Published var language: Language = .english
-    @Published var problemSize: ProblemSize = .medium
+    @Published var language: Language = .english {
+        didSet {
+            newGame()
+        }
+    }
+    @Published var problemSize: ProblemSize = .medium {
+        didSet {
+            newGame()
+        }
+    }
     @Published var wordsList: [String] = EnglishWords.words
     
     init() {
@@ -66,12 +74,12 @@ class GameManager: ObservableObject {
     
     func updateLanguage(newLanguage: Language) {
         self.language = newLanguage
-        newGame()
+//        newGame()
     }
     
     func updateProblemSize(newSize: ProblemSize) {
         self.problemSize = newSize
-        newGame()
+//        newGame()
     }
     
     private func generateNewLetters() {

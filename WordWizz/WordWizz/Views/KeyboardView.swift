@@ -9,11 +9,20 @@ import SwiftUI
 
 struct KeyboardView: View {
     @EnvironmentObject var gameManager : GameManager
+    let screenWidth = UIScreen.main.bounds.width
+    let padding: CGFloat = 30
+    let buttonSpacing: CGFloat = 15
         
     var body: some View {
         VStack {
-            HStack(spacing: 15) {
+            let numberOfLetters = gameManager.letters.count
+            let totalSpacing = buttonSpacing * CGFloat(numberOfLetters - 1)
+            let availableWidth = screenWidth - padding - totalSpacing
+            let buttonWidth = availableWidth / CGFloat(numberOfLetters)
+            
+            HStack(spacing: buttonSpacing) {
                 ForEach(gameManager.letters, id: \.self) { letter in LettersButtonView(letter: letter)}
+                    .frame(width: buttonWidth)
             }
             
             Spacer()

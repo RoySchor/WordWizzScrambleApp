@@ -19,7 +19,7 @@ struct LettersButtonView: View {
             Text(letter)
                 .font(.system(size: CGFloat(35)))
                 .bold()
-                .frame(width: 45, height: 55)
+                .frame(width: 40, height: 55)
                 .background(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
                 .foregroundColor(.primary)
                 .cornerRadius(15)
