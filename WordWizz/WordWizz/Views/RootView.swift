@@ -9,6 +9,7 @@ import SwiftUI
 
 struct RootView: View {
     @EnvironmentObject var gameManager : GameManager
+    @State private var showPreferences = false
     
     var body: some View {
         ZStack {
@@ -33,7 +34,8 @@ struct RootView: View {
                 Spacer()
                     .frame(height: 60)
                 
-                ActionButtonsView()
+                ActionButtonsView(showPreferences: $showPreferences)
+                    .environmentObject(gameManager)
                 
             }
             if let message = gameManager.message {

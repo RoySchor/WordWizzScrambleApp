@@ -14,6 +14,10 @@ class GameManager: ObservableObject {
     @Published var score: Int = 0
     @Published var isWordValid: Bool = false
     @Published var message: String? = nil
+
+    @Published var language: Language = .english
+    @Published var problemSize: ProblemSize = .medium
+    @Published var wordsList: [String] = EnglishWords.words
     
     init() {
         generateNewLetters()
@@ -60,16 +64,47 @@ class GameManager: ObservableObject {
         score = 0
     }
     
+    func updateLanguage(newLanguage: Language) {
+        self.language = newLanguage
+        newGame()
+    }
+    
+    func updateProblemSize(newSize: ProblemSize) {
+        self.problemSize = newSize
+        newGame()
+    }
+    
     private func generateNewLetters() {
+//        Switches to correct language
+        switch language {
+        case .english:
+            wordsList = EnglishWords.words
+        case .french:
+            wordsList = FrenchWords.words
+        }
+        
+//        Switches to correct problem size
+        let uniqueCharCount: Int
+        switch problemSize {
+        case .small:
+            uniqueCharCount = 5
+        case .medium:
+            uniqueCharCount = 6
+        case .large:
+            uniqueCharCount = 7
+        }
+        
 //        Filters the words list to those words of 5 unique chars
-        let filteredWords = Words.words.filter { Set($0).count == 5 }
+        let filteredWords = wordsList.filter { Set($0).count == uniqueCharCount }
+        
 //        selects a random element and grabs its unique chars
         let uniqueCharacters = Set(filteredWords.randomElement()!)
         letters = uniqueCharacters.map { String($0) }
     }
 
     private func updateWordValidity() {
-        if currentWord.count >= 4 && Words.words.contains(currentWord.joined()) {
+//        if currentWord.count >= 4 && Words.words.contains(currentWord.joined()) {
+        if currentWord.count >= 4 && wordsList.contains(currentWord.joined()) {
             isWordValid = true
         } else {
             isWordValid = false

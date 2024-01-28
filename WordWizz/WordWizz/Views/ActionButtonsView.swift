@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ActionButtonsView: View {
     @EnvironmentObject var gameManager : GameManager
+    @Binding var showPreferences : Bool
     
     var body: some View {
         HStack(spacing: 10) {
@@ -26,7 +27,7 @@ struct ActionButtonsView: View {
             Spacer()
                 .frame(width: 10)
             Button {
-                
+                showPreferences.toggle()
             } label: {
                 Image(systemName: "gear")
                     .font(.system(size: 40, weight: .heavy))
@@ -36,6 +37,11 @@ struct ActionButtonsView: View {
                     .background(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
                     .cornerRadius(15)
             }
+            .sheet(isPresented: $showPreferences, content: {
+                PreferencesView()
+                    .environmentObject(gameManager)
+//                PreferencesView(language: $gameManager.language, problemSize: $gameManager.problemSize)
+            })
             Spacer()
                 .frame(width: 10)
             Button {
@@ -67,6 +73,6 @@ struct ActionButtonsView: View {
 }
 
 #Preview {
-    ActionButtonsView()
+    ActionButtonsView(showPreferences: .constant(true))
         .environmentObject(GameManager())
 }

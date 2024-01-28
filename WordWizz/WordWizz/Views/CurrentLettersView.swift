@@ -11,7 +11,13 @@ struct CurrentLettersView: View {
     var currentLetters: [String]
     
     var body: some View {
-        HStack(spacing: 30) {
+        let screenWidth = UIScreen.main.bounds.width
+        let totalButtonWidth = CGFloat(currentLetters.count) * 45
+        let extraPadding: CGFloat = 20 // Adjust this value as needed
+        let availableSpacingWidth = screenWidth - totalButtonWidth - extraPadding
+        let spacing = max(availableSpacingWidth / CGFloat(currentLetters.count - 1), 0)
+        
+        HStack(spacing: spacing) {
             ForEach(Array(currentLetters.enumerated()), id: \.offset) {
                 index, letter in
                 Text(String(letter))
