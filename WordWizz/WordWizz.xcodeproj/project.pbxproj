@@ -19,6 +19,7 @@
 		9C62C5EB2B66F6E000E6DB43 /* FrenchWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5EA2B66F6E000E6DB43 /* FrenchWords.swift */; };
 		9C62C5ED2B68167A00E6DB43 /* WhatLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5EC2B68167A00E6DB43 /* WhatLanguageView.swift */; };
 		9C62C5EF2B681F2D00E6DB43 /* HintsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5EE2B681F2D00E6DB43 /* HintsView.swift */; };
+		9C62C5F32B68659E00E6DB43 /* PolygonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5F22B68659E00E6DB43 /* PolygonShape.swift */; };
 		9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA22B5DE135009E366D /* RootView.swift */; };
 		9CBBEBA52B5DEA55009E366D /* GameTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA42B5DEA55009E366D /* GameTitleView.swift */; };
 		9CBBEBA72B5DEB74009E366D /* CurrentScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */; };
@@ -65,6 +66,7 @@
 		9C62C5EA2B66F6E000E6DB43 /* FrenchWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrenchWords.swift; sourceTree = "<group>"; };
 		9C62C5EC2B68167A00E6DB43 /* WhatLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatLanguageView.swift; sourceTree = "<group>"; };
 		9C62C5EE2B681F2D00E6DB43 /* HintsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsView.swift; sourceTree = "<group>"; };
+		9C62C5F22B68659E00E6DB43 /* PolygonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonShape.swift; sourceTree = "<group>"; };
 		9CBBEBA22B5DE135009E366D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9CBBEBA42B5DEA55009E366D /* GameTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTitleView.swift; sourceTree = "<group>"; };
 		9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentScoreView.swift; sourceTree = "<group>"; };
@@ -178,6 +180,7 @@
 				9C62C5E82B630D1200E6DB43 /* PreferencesView.swift */,
 				9C62C5EC2B68167A00E6DB43 /* WhatLanguageView.swift */,
 				9C62C5EE2B681F2D00E6DB43 /* HintsView.swift */,
+				9C62C5F22B68659E00E6DB43 /* PolygonShape.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C62C5F32B68659E00E6DB43 /* PolygonShape.swift in Sources */,
 				9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */,
 				9C62C5EB2B66F6E000E6DB43 /* FrenchWords.swift in Sources */,
 				9CBBEBB92B5EEFD7009E366D /* GameManager.swift in Sources */,

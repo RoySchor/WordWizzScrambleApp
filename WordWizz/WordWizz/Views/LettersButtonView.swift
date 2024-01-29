@@ -16,15 +16,27 @@ struct LettersButtonView: View {
         Button {
             gameManager.addLetter(letter: letter)
         } label: {
-            Text(letter)
-                .font(.system(size: CGFloat(35)))
-                .bold()
-                .frame(width: 40, height: 55)
-                .background(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
-                .foregroundColor(.primary)
-                .cornerRadius(15)
+            ZStack {
+                PolygonShape(sides: numberOfSides(for: gameManager.letters.count))
+                    .fill(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
+                    .frame(width: 55, height: 70)
+                
+                Text(letter)
+                    .font(.system(size: CGFloat(35)))
+                    .bold()
+                    .foregroundColor(.primary)
+            }
         }
         .buttonStyle(.plain)
+    }
+    
+    private func numberOfSides(for totalLetters: Int) -> Int {
+        switch totalLetters {
+        case 5: return 4  // Squares (diamonds)
+        case 6: return 5  // Pentagons
+        case 7: return 6  // Hexagons
+        default: return 4
+        }
     }
 }
 
