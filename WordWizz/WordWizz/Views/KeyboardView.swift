@@ -32,7 +32,7 @@ struct KeyboardView: View {
                 Button {
                     gameManager.submitWord()
                 } label: {
-                    Text("Enter")
+                    Text(displayEnterText())
                         .font(.system(size: 25))
                         .bold()
                         .frame(width: 80, height: 55)
@@ -60,6 +60,15 @@ struct KeyboardView: View {
                 }
                 .disabled(gameManager.currentWord.isEmpty)
             }
+        }
+    }
+    
+    private func displayEnterText() -> String {
+        switch gameManager.language {
+        case .english:
+            return "Enter"
+        case .french:
+            return "Retour"
         }
     }
 }

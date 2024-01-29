@@ -10,6 +10,7 @@ import SwiftUI
 struct RootView: View {
     @EnvironmentObject var gameManager : GameManager
     @State private var showPreferences = false
+    @State private var showHints = false
     
     var body: some View {
         ZStack {
@@ -34,7 +35,7 @@ struct RootView: View {
                 Spacer()
                     .frame(height: 60)
                 
-                ActionButtonsView(showPreferences: $showPreferences)
+                ActionButtonsView(showPreferences: $showPreferences, showHints: $showHints)
                     .environmentObject(gameManager)
                 Spacer()
                     .frame(height: 20)

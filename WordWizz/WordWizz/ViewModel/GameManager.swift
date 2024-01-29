@@ -14,7 +14,8 @@ class GameManager: ObservableObject {
     @Published var score: Int = 0
     @Published var isWordValid: Bool = false
     @Published var message: String? = nil
-
+    
+    @Published var wordsList: [String] = EnglishWords.words
     @Published var language: Language = .english {
         didSet {
             newGame()
@@ -25,7 +26,6 @@ class GameManager: ObservableObject {
             newGame()
         }
     }
-    @Published var wordsList: [String] = EnglishWords.words
     
     init() {
         generateNewLetters()
@@ -71,14 +71,33 @@ class GameManager: ObservableObject {
         foundWords = []
         score = 0
     }
+        
+    func possibleWords() -> [String] {
+        let setOfLetters = Set(letters.joined())
+        return wordsList.filter { word in
+            let wordLetters = Set(word)
+            return wordLetters.isSubset(of: setOfLetters)
+        }
+    }
     
-//    func updateLanguage(newLanguage: Language) {
-//        self.language = newLanguage
-//    }
-//    
-//    func updateProblemSize(newSize: ProblemSize) {
-//        self.problemSize = newSize
-//    }
+    func maxPossiblePoints() -> Int {
+        let possibleWords = possibleWords()
+        return possibleWords.reduce(0) { total, word in
+            total + scoreForWord(word: Array(word.map { String($0) }))
+        }
+    }
+    
+    func numPossiblePangrams() -> Int {
+        return possibleWords().filter { isPangram(word: Array($0.map { String($0) })) }.count
+    }
+    
+    func wordCountStartingWith(letter: String, length: Int) -> Int {
+        return possibleWords().filter { $0.hasPrefix(letter) && $0.count == length }.count
+    }
+    
+    func maxLengthOfWords() -> Int {
+        return possibleWords().map { $0.count }.max()!
+    }
     
     private func generateNewLetters() {
 //        Switches to correct language
@@ -100,7 +119,7 @@ class GameManager: ObservableObject {
             uniqueCharCount = 7
         }
         
-//        Filters the words list to those words of 5 unique chars
+//        Filters the words list to those words of unique chars
         let filteredWords = wordsList.filter { Set($0).count == uniqueCharCount }
         
 //        selects a random element and grabs its unique chars
@@ -109,7 +128,6 @@ class GameManager: ObservableObject {
     }
 
     private func updateWordValidity() {
-//        if currentWord.count >= 4 && Words.words.contains(currentWord.joined()) {
         if currentWord.count >= 4 && wordsList.contains(currentWord.joined()) {
             isWordValid = true
         } else {
@@ -117,19 +135,26 @@ class GameManager: ObservableObject {
         }
     }
 
-//    A four-letter word scores one point
-//    A pangram scores an additional 10 points
-//    words score points equal to their length
     private func updateScore() {
-        if currentWord.count == 4 {
-            score += 1
+        score += scoreForWord(word: currentWord)
+    }
+    
+    //    A four-letter word scores one point
+    //    A pangram scores an additional 10 points
+    //    words score points equal to their length
+    private func scoreForWord(word: [String]) -> Int {
+        var currentWordScore = 0
+        
+        if word.count == 4 {
+            currentWordScore += 1
         }
         else {
-            if isPangram(word: currentWord){
-                score += 10
+            if isPangram(word: word){
+                currentWordScore += 10
             }
-            score += currentWord.count
+            currentWordScore += word.count
         }
+        return currentWordScore
     }
 
 //    Check if the word is a pangram, contains all letters

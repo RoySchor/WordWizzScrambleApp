@@ -10,6 +10,7 @@ import SwiftUI
 struct ActionButtonsView: View {
     @EnvironmentObject var gameManager : GameManager
     @Binding var showPreferences : Bool
+    @Binding var showHints : Bool
     
     var body: some View {
         HStack(spacing: 10) {
@@ -48,7 +49,7 @@ struct ActionButtonsView: View {
                 .frame(width: 10)
             
             Button {
-                
+                showHints.toggle()
             } label: {
                 Image(systemName: "lightbulb.min.badge.exclamationmark.fill")
                     .font(.system(size: 30, weight: .heavy))
@@ -58,6 +59,10 @@ struct ActionButtonsView: View {
                     .background(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
                     .cornerRadius(15)
             }
+            .sheet(isPresented: $showHints, content: {
+                HintsView(showHints: $showHints)
+                    .environmentObject(gameManager)
+            })
             
             Spacer()
                 .frame(width: 10)
@@ -78,6 +83,6 @@ struct ActionButtonsView: View {
 }
 
 #Preview {
-    ActionButtonsView(showPreferences: .constant(true))
+    ActionButtonsView(showPreferences: .constant(false), showHints: .constant(true))
         .environmentObject(GameManager())
 }
