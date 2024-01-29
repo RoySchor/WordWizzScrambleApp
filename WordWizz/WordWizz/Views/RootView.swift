@@ -36,6 +36,10 @@ struct RootView: View {
                 
                 ActionButtonsView(showPreferences: $showPreferences)
                     .environmentObject(gameManager)
+                Spacer()
+                    .frame(height: 20)
+                
+                WhatLanguageView()
                 
             }
             if let message = gameManager.message {
@@ -46,7 +50,7 @@ struct RootView: View {
                     .background(Color.white.opacity(0.8))
                     .cornerRadius(8)
                     .transition(.opacity)
-                    .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 5)
+                    .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 6)
             }
         }
     }

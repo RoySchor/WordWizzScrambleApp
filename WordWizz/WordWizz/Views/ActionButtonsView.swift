@@ -24,8 +24,10 @@ struct ActionButtonsView: View {
                     .background(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
                     .cornerRadius(15)
             }
+            
             Spacer()
                 .frame(width: 10)
+            
             Button {
                 showPreferences.toggle()
             } label: {
@@ -38,12 +40,13 @@ struct ActionButtonsView: View {
                     .cornerRadius(15)
             }
             .sheet(isPresented: $showPreferences, content: {
-                PreferencesView()
+                PreferencesView(showPreferences: $showPreferences)
                     .environmentObject(gameManager)
-//                PreferencesView(language: $gameManager.language, problemSize: $gameManager.problemSize)
             })
+            
             Spacer()
                 .frame(width: 10)
+            
             Button {
                 
             } label: {
@@ -55,8 +58,10 @@ struct ActionButtonsView: View {
                     .background(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
                     .cornerRadius(15)
             }
+            
             Spacer()
                 .frame(width: 10)
+            
             Button {
                 gameManager.newGame()
             } label: {

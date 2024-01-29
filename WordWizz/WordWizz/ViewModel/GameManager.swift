@@ -72,15 +72,13 @@ class GameManager: ObservableObject {
         score = 0
     }
     
-    func updateLanguage(newLanguage: Language) {
-        self.language = newLanguage
-//        newGame()
-    }
-    
-    func updateProblemSize(newSize: ProblemSize) {
-        self.problemSize = newSize
-//        newGame()
-    }
+//    func updateLanguage(newLanguage: Language) {
+//        self.language = newLanguage
+//    }
+//    
+//    func updateProblemSize(newSize: ProblemSize) {
+//        self.problemSize = newSize
+//    }
     
     private func generateNewLetters() {
 //        Switches to correct language

@@ -11,12 +11,13 @@ struct PreferencesView: View {
 //    @Binding var language: Language
 //    @Binding var problemSize: ProblemSize
     @EnvironmentObject var gameManager : GameManager
+    @Binding var showPreferences : Bool
     
     var body: some View {
         
         NavigationView {
             Form {
-                Picker("Choose a language", selection: $gameManager.language) {
+                Picker("Choose a language for guessing", selection: $gameManager.language) {
                     ForEach(Language.allCases, id: \.self) { language in
                         Text(language.rawValue)
                             .tag(language)
@@ -25,34 +26,22 @@ struct PreferencesView: View {
                 
                 Picker("Choose the amount of letters", selection: $gameManager.problemSize) {
                     ForEach(ProblemSize.allCases, id: \.self) { size in
-                        Text("\(size.rawValue)")
+                        Text("\(size.rawValue) letters")
                             .tag(size)
                     }
                 }
             }
             .navigationBarTitle("Game Preferences")
+            .toolbar {
+                Button("Close") {
+                    showPreferences.toggle()
+                }
+            }
         }
-//        NavigationView {
-//            Form {
-//                Picker("Choose a language", selection: $language) {
-//                    ForEach(Language.allCases, id: \.self) { language in
-//                        Text(language.rawValue)
-//                            .tag(language)
-//                    }
-//                }
-//                
-//                Picker("Choose the amount of letters", selection: $problemSize) {
-//                    ForEach(ProblemSize.allCases, id: \.self) { size in
-//                        Text("\(size.rawValue)")
-//                            .tag(size)
-//                    }
-//                }
-//            }
-//            .navigationBarTitle("Game Preferences")
-//        }
     }
 }
-//
-//#Preview {
-//    PreferencesView()
-//}
+
+#Preview {
+    PreferencesView(showPreferences: .constant(true))
+        .environmentObject(GameManager())
+}
