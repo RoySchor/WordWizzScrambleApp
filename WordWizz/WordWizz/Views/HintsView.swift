@@ -39,6 +39,7 @@ struct HintsView: View {
                         Text("Show Specific Hints")
                     }
                     if showSpecificHints {
+                        Text("Hint:\nThe number of words that can be formed starting with the given letter at the given length.")
                         specificHintsView()
                     }
                 }
@@ -65,7 +66,7 @@ struct HintsView: View {
                 let wordCountAtLength = gameManager.wordCountStartingWith(letter: letter, length: length)
                 
                 if wordCountAtLength > 0 {
-                    LabeledContent("Words starting with \(letter) of length \(length)", value: String(wordCountAtLength))
+                    LabeledContent("Starts with: **\"\(letter.capitalized)\"**, length: \(length)", value: "\(String(wordCountAtLength)) possibilities")
                 }
             }
         }
