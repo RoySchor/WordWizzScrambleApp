@@ -9,66 +9,45 @@ import SwiftUI
 
 struct KeyboardView: View {
     @EnvironmentObject var gameManager : GameManager
-    let screenWidth = UIScreen.main.bounds.width
-    let padding: CGFloat = 30
-    let buttonSpacing: CGFloat = 15
         
     var body: some View {
         VStack {
             let numberOfLetters = gameManager.letters.count
-            let totalSpacing = buttonSpacing * CGFloat(numberOfLetters - 1)
-            let availableWidth = screenWidth - padding - totalSpacing
-            let buttonWidth = availableWidth / CGFloat(numberOfLetters)
             
-            HStack(spacing: buttonSpacing) {
-                ForEach(gameManager.letters, id: \.self) { letter in LettersButtonView(letter: letter)}
-                    .frame(width: buttonWidth)
-            }
-            
-            Spacer()
-                .frame(height: 20)
-            
-            HStack(spacing: 10) {
-                Button {
-                    gameManager.submitWord()
-                } label: {
-                    Text(displayEnterText())
-                        .font(.system(size: 25))
-                        .bold()
-                        .frame(width: 80, height: 55)
-                        .foregroundColor(.primary)
-                        .background(gameManager.isWordValid ? Color.green.gradient : Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
-                        .opacity((gameManager.currentWord.count < 4 || !gameManager.isWordValid) ? 0.6 : 1)
-                        .cornerRadius(15)
+            GeometryReader { geometry in
+                let radius = min(geometry.size.width, geometry.size.height) / 6.5
+                ZStack {
+                    LettersButtonView(letter: gameManager.letters.first!)
+                            .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
+                    
+                    ForEach(1..<numberOfLetters, id: \.self) { index in
+                        let angle = getKeyAngle(numberOfLetters: numberOfLetters, index: index)
+                        let xPosition = geometry.size.width / 2 + cos(angle) * radius
+                        let yPosition = geometry.size.height / 2 + sin(angle) * radius
+                        
+                        LettersButtonView(letter: gameManager.letters[index])
+                            .position(x: xPosition, y: yPosition)
+                    }
                 }
-                .disabled(!gameManager.isWordValid)
-                
-                Spacer()
-                    .frame(width: 45)
-                
-                Button {
-                    gameManager.deleteLastLetter()
-                } label: {
-                    Image(systemName: "delete.backward.fill")
-                        .font(.system(size: 25, weight: .heavy))
-                        .bold()
-                        .frame(width: 55, height: 55)
-                        .foregroundColor(.primary)
-                        .background(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
-                        .opacity((gameManager.currentWord.count < 1) ? 0.6 : 1)
-                        .cornerRadius(15)
-                }
-                .disabled(gameManager.currentWord.isEmpty)
             }
         }
     }
     
-    private func displayEnterText() -> String {
-        switch gameManager.language {
-        case .english:
-            return "Enter"
-        case .french:
-            return "Retour"
+    private func getKeyAngle(numberOfLetters: Int, index: Int) -> CGFloat {
+        let numerator = 2 * CGFloat.pi
+        let denominator = CGFloat(numberOfLetters - 1)
+        let angleMultiplier = CGFloat(index - 1)
+        let baseAngle = numerator / denominator * angleMultiplier
+        
+        switch numberOfLetters {
+        case 7:
+           return baseAngle - .pi
+        case 6:
+            return baseAngle - .pi / 2
+        case 5:
+            return baseAngle - .pi / 2
+        default:
+            return baseAngle - .pi
         }
     }
 }

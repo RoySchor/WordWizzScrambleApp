@@ -23,17 +23,22 @@ struct RootView: View {
                 
                 CurrentScoreView()
                 Spacer()
-                    .frame(height: 100)
+                    .frame(height: 80)
                 
                 FoundWordsView()
                 
                 CurrentLettersView(currentLetters: gameManager.currentWord)
                 Spacer()
-                    .frame(height: 20)
-                
-                KeyboardView()
+                    .frame(height: 330)
+            }
+
+            KeyboardView()
+                .offset(y: 120)
+            
+            VStack
+            {
                 Spacer()
-                    .frame(height: 60)
+                    .frame(height: 610)
                 
                 ActionButtonsView(showPreferences: $showPreferences, showHints: $showHints)
                     .environmentObject(gameManager)
