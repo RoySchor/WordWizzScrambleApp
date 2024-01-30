@@ -11,6 +11,7 @@ struct LettersButtonView: View {
     @EnvironmentObject var gameManager : GameManager
     
     var letter: String
+    var color: Color = Color(Constants.FoundWordsBackgroundColorName.bkColor)
     
     var body: some View {
         Button {
@@ -18,7 +19,7 @@ struct LettersButtonView: View {
         } label: {
             ZStack {
                 PolygonShape(sides: numberOfSides(for: gameManager.letters.count))
-                    .fill(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
+                    .fill(color.gradient)
                     .frame(width: 65, height: 70)
                 
                 Text(letter)
