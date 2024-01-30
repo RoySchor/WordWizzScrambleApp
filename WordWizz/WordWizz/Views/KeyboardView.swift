@@ -17,16 +17,16 @@ struct KeyboardView: View {
             GeometryReader { geometry in
                 let radius = min(geometry.size.width, geometry.size.height) / 5.8
                 ZStack {
-                    LettersButtonView(letter: gameManager.letters.first!)
+                    LettersButtonView(letter: gameManager.keyLetter, color: .yellow)
                             .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                     
-                    ForEach(1..<numberOfLetters, id: \.self) { index in
+                    ForEach(0..<gameManager.lettersWithoutKey.count, id: \.self) { index in
                         let angle = getKeyAngle(numberOfLetters: numberOfLetters, index: index)
                         
                         let xPosition = geometry.size.width / 2 + cos(angle) * radius
                         let yPosition = geometry.size.height / 2 + sin(angle) * radius
                         
-                        LettersButtonView(letter: gameManager.letters[index])
+                        LettersButtonView(letter: gameManager.lettersWithoutKey[index])
                             .position(x: xPosition, y: yPosition)
                     }
                 }

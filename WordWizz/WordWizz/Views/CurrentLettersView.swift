@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CurrentLettersView: View {
+    @EnvironmentObject var gameManager : GameManager
     var currentLetters: [String]
     
     var body: some View {
@@ -17,6 +18,7 @@ struct CurrentLettersView: View {
                 Text(String(letter))
                     .font(.largeTitle)
                     .bold()
+                    .foregroundColor(letter == gameManager.keyLetter ? .yellow : .primary)
             }
             
         }
@@ -26,4 +28,5 @@ struct CurrentLettersView: View {
 
 #Preview {
     CurrentLettersView(currentLetters: ["a", "n", "t", "b", "e", "c"])
+        .environmentObject(GameManager())
 }

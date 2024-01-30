@@ -38,7 +38,7 @@ struct RootView: View {
             VStack
             {
                 Spacer()
-                    .frame(height: 610)
+                    .frame(height: 620)
                 
                 ActionButtonsView(showPreferences: $showPreferences, showHints: $showHints)
                     .environmentObject(gameManager)

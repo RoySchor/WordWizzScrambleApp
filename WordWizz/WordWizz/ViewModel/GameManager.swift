@@ -14,6 +14,8 @@ class GameManager: ObservableObject {
     @Published var score: Int = 0
     @Published var isWordValid: Bool = false
     @Published var message: String? = nil
+    @Published var keyLetter: String = ""
+    @Published var lettersWithoutKey: [String] = []
     
     @Published var wordsList: [String] = EnglishWords.words
     @Published var language: Language = .english {
@@ -60,7 +62,14 @@ class GameManager: ObservableObject {
     }
     
     func shuffleLetters() {
-        letters.shuffle()
+//        if let centerIndex = letters.firstIndex(of: centerLetter) {
+//            letters.remove(at: centerIndex)
+//            letters.shuffle()
+//            letters.insert(centerLetter, at: centerIndex)
+//        } else {
+//            letters.shuffle()
+//        }
+        lettersWithoutKey.shuffle()
     }
 
 //    generates new letters
@@ -76,7 +85,7 @@ class GameManager: ObservableObject {
         let setOfLetters = Set(letters.joined())
         return wordsList.filter { word in
             let wordLetters = Set(word)
-            return wordLetters.isSubset(of: setOfLetters)
+            return wordLetters.isSubset(of: setOfLetters) && word.contains(keyLetter) && word.count >= 4
         }
     }
     
@@ -121,14 +130,16 @@ class GameManager: ObservableObject {
         
 //        Filters the words list to those words of unique chars
         let filteredWords = wordsList.filter { Set($0).count == uniqueCharCount }
-        
 //        selects a random element and grabs its unique chars
         let uniqueCharacters = Set(filteredWords.randomElement()!)
         letters = uniqueCharacters.map { String($0) }
+        keyLetter = letters.first!
+        lettersWithoutKey = letters
+        lettersWithoutKey.remove(at: lettersWithoutKey.firstIndex(of: keyLetter)!)
     }
 
     private func updateWordValidity() {
-        if currentWord.count >= 4 && wordsList.contains(currentWord.joined()) {
+        if currentWord.count >= 4 && currentWord.contains(keyLetter) && wordsList.contains(currentWord.joined()) {
             isWordValid = true
         } else {
             isWordValid = false
