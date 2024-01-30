@@ -15,7 +15,7 @@ struct KeyboardView: View {
             let numberOfLetters = gameManager.letters.count
             
             GeometryReader { geometry in
-                let radius = min(geometry.size.width, geometry.size.height) / 6
+                let radius = min(geometry.size.width, geometry.size.height) / 5.8
                 ZStack {
                     LettersButtonView(letter: gameManager.letters.first!)
                             .position(x: geometry.size.width / 2, y: geometry.size.height / 2)

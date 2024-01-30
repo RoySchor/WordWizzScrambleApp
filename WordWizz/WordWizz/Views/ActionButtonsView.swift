@@ -51,7 +51,7 @@ struct ActionButtonsView: View {
         Spacer()
             .frame(height: 20)
         
-        HStack(spacing: 10) {
+        HStack(spacing: 17) {
 //            Shuffle Button
             Button {
                 gameManager.shuffleLetters()
