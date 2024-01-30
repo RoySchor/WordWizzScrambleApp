@@ -15,13 +15,14 @@ struct KeyboardView: View {
             let numberOfLetters = gameManager.letters.count
             
             GeometryReader { geometry in
-                let radius = min(geometry.size.width, geometry.size.height) / 6.5
+                let radius = min(geometry.size.width, geometry.size.height) / 6
                 ZStack {
                     LettersButtonView(letter: gameManager.letters.first!)
                             .position(x: geometry.size.width / 2, y: geometry.size.height / 2)
                     
                     ForEach(1..<numberOfLetters, id: \.self) { index in
                         let angle = getKeyAngle(numberOfLetters: numberOfLetters, index: index)
+                        
                         let xPosition = geometry.size.width / 2 + cos(angle) * radius
                         let yPosition = geometry.size.height / 2 + sin(angle) * radius
                         
@@ -45,7 +46,7 @@ struct KeyboardView: View {
         case 6:
             return baseAngle - .pi / 2
         case 5:
-            return baseAngle - .pi / 2
+            return baseAngle - .pi / 4
         default:
             return baseAngle - .pi
         }

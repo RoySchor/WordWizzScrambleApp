@@ -21,7 +21,7 @@ class GameManager: ObservableObject {
             newGame()
         }
     }
-    @Published var problemSize: ProblemSize = .medium {
+    @Published var problemSize: ProblemSize = .large {
         didSet {
             newGame()
         }

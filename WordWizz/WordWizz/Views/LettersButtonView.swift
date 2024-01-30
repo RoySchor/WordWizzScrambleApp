@@ -19,7 +19,7 @@ struct LettersButtonView: View {
             ZStack {
                 PolygonShape(sides: numberOfSides(for: gameManager.letters.count))
                     .fill(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
-                    .frame(width: 55, height: 70)
+                    .frame(width: 65, height: 70)
                 
                 Text(letter)
                     .font(.system(size: CGFloat(35)))
