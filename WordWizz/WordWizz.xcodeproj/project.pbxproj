@@ -10,9 +10,6 @@
 		9C00075E2B55EC18002325DF /* WordWizzApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00075D2B55EC18002325DF /* WordWizzApp.swift */; };
 		9C0007622B55EC20002325DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0007612B55EC20002325DF /* Assets.xcassets */; };
 		9C0007652B55EC20002325DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0007642B55EC20002325DF /* Preview Assets.xcassets */; };
-		9C00076F2B55EC20002325DF /* WordWizzTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00076E2B55EC20002325DF /* WordWizzTests.swift */; };
-		9C0007792B55EC21002325DF /* WordWizzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007782B55EC21002325DF /* WordWizzUITests.swift */; };
-		9C00077B2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00077A2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift */; };
 		9C0007A22B56AC05002325DF /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A12B56AC05002325DF /* constants.swift */; };
 		9C46E8DF2B6B493900781E34 /* ScrambleLetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46E8DE2B6B493900781E34 /* ScrambleLetterButtonView.swift */; };
 		9C46E8E12B6B4A0D00781E34 /* ScrambleKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46E8E02B6B4A0D00781E34 /* ScrambleKeyboardView.swift */; };
@@ -59,10 +56,7 @@
 		9C0007612B55EC20002325DF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0007642B55EC20002325DF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		9C00076A2B55EC20002325DF /* WordWizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordWizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C00076E2B55EC20002325DF /* WordWizzTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordWizzTests.swift; sourceTree = "<group>"; };
 		9C0007742B55EC20002325DF /* WordWizzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordWizzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		9C0007782B55EC21002325DF /* WordWizzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordWizzUITests.swift; sourceTree = "<group>"; };
-		9C00077A2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordWizzUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9C0007A12B56AC05002325DF /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
 		9C46E8DE2B6B493900781E34 /* ScrambleLetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleLetterButtonView.swift; sourceTree = "<group>"; };
 		9C46E8E02B6B4A0D00781E34 /* ScrambleKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleKeyboardView.swift; sourceTree = "<group>"; };
@@ -115,8 +109,6 @@
 			isa = PBXGroup;
 			children = (
 				9C00075C2B55EC18002325DF /* WordWizz */,
-				9C00076D2B55EC20002325DF /* WordWizzTests */,
-				9C0007772B55EC21002325DF /* WordWizzUITests */,
 				9C00075B2B55EC18002325DF /* Products */,
 			);
 			sourceTree = "<group>";
@@ -153,23 +145,6 @@
 				9C0007642B55EC20002325DF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		9C00076D2B55EC20002325DF /* WordWizzTests */ = {
-			isa = PBXGroup;
-			children = (
-				9C00076E2B55EC20002325DF /* WordWizzTests.swift */,
-			);
-			path = WordWizzTests;
-			sourceTree = "<group>";
-		};
-		9C0007772B55EC21002325DF /* WordWizzUITests */ = {
-			isa = PBXGroup;
-			children = (
-				9C0007782B55EC21002325DF /* WordWizzUITests.swift */,
-				9C00077A2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift */,
-			);
-			path = WordWizzUITests;
 			sourceTree = "<group>";
 		};
 		9CBBEB9E2B5DDD8B009E366D /* Views */ = {
@@ -370,7 +345,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C00076F2B55EC20002325DF /* WordWizzTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -378,8 +352,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C0007792B55EC21002325DF /* WordWizzUITests.swift in Sources */,
-				9C00077B2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
