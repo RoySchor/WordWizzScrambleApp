@@ -147,24 +147,40 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		9CAD16502B6BFCBC007F1920 /* NytGame */ = {
+			isa = PBXGroup;
+			children = (
+				9C62C5F22B68659E00E6DB43 /* PolygonShape.swift */,
+				9CBBEBAE2B5E0463009E366D /* NYTKeyboardView.swift */,
+				9CBBEBAC2B5DFD7D009E366D /* NYTLettersButtonView.swift */,
+			);
+			path = NytGame;
+			sourceTree = "<group>";
+		};
+		9CAD16512B6BFCF1007F1920 /* ScrambleGame */ = {
+			isa = PBXGroup;
+			children = (
+				9C46E8E02B6B4A0D00781E34 /* ScrambleKeyboardView.swift */,
+				9C46E8DE2B6B493900781E34 /* ScrambleLetterButtonView.swift */,
+			);
+			path = ScrambleGame;
+			sourceTree = "<group>";
+		};
 		9CBBEB9E2B5DDD8B009E366D /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				9CAD16512B6BFCF1007F1920 /* ScrambleGame */,
+				9CAD16502B6BFCBC007F1920 /* NytGame */,
 				9CBBEBA22B5DE135009E366D /* RootView.swift */,
 				9CBBEBA42B5DEA55009E366D /* GameTitleView.swift */,
 				9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */,
 				9CBBEBA82B5DF352009E366D /* FoundWordsView.swift */,
 				9CBBEBAA2B5DF6CB009E366D /* CurrentLettersView.swift */,
-				9CBBEBAC2B5DFD7D009E366D /* NYTLettersButtonView.swift */,
-				9CBBEBAE2B5E0463009E366D /* NYTKeyboardView.swift */,
 				9CBBEBB22B5E3DCD009E366D /* ActionButtonsView.swift */,
 				9C62C5E82B630D1200E6DB43 /* PreferencesView.swift */,
 				9C62C5EC2B68167A00E6DB43 /* WhatLanguageView.swift */,
 				9C62C5EE2B681F2D00E6DB43 /* HintsView.swift */,
-				9C62C5F22B68659E00E6DB43 /* PolygonShape.swift */,
 				9CEB96F52B6B1B17007298CD /* GameSelectorView.swift */,
-				9C46E8DE2B6B493900781E34 /* ScrambleLetterButtonView.swift */,
-				9C46E8E02B6B4A0D00781E34 /* ScrambleKeyboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
