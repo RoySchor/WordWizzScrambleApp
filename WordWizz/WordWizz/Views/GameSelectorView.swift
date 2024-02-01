@@ -13,8 +13,8 @@ struct GameSelectorView: View {
     
     var body: some View {
         VStack {
-            Spacer()
-                .frame(height: 55)
+//            Spacer()
+//                .frame(height: 15)
             
             titleOfView(title: "Welcome to Word Wizz")
                 .cornerRadius(15)
@@ -32,13 +32,21 @@ struct GameSelectorView: View {
                 }
             }
             .pickerStyle(.segmented)
-            
+
             Form {
                 Section {
-                    if gameManager.gameType == .regularScramble {
-                        Text("This is the regular game of scramble.\n\nYou are given a set of letters -- you can choose how many in the settings.\n\nYour goal is to form as many words as possible from the given letters.")
-                    } else if gameManager.gameType == .newYorkTimesScramble {
-                        Text("This is the New York Times Version of scramble.\n\nYou are given a set of letters -- you can choose how many in the settings.\n\nYour goal is to form as many words as possible from the given letters. However, you must use the middle letter in each word you form. This letter will be highlighted in yellow.")
+                    VStack(alignment: .leading, spacing: 5) {
+                        Text("This is the \(gameManager.gameType.rawValue) game.\n\nYou are given a set of letters")
+                        
+                        HStack(alignment: .top) {
+                            Text("\t•")
+                            Text("You can choose how many in the settings.")
+                                .fixedSize(horizontal: false, vertical: true)
+                        }
+                        Text("\nYour goal is to form as many words as possible from the given letters.")
+                    }
+                    if gameManager.gameType == .newYorkTimesScramble {
+                        Text("However, you must use the middle letter in each word you form. This letter will be highlighted in yellow.")
                     }
                 } header: {
                     Text("Game Instructions")
@@ -69,9 +77,6 @@ struct GameSelectorView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(Constants.BackgroundColorName.bkColor).gradient)
-        
-//        Spacer()
-//            .frame(height: 15)
     }
     
     private func titleOfView(title: String) -> some View {

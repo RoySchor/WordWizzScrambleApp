@@ -23,7 +23,7 @@ class GameManager: ObservableObject {
             newGame()
         }
     }
-    @Published var problemSize: ProblemSize = .large {
+    @Published var problemSize: ProblemSize = .medium {
         didSet {
             newGame()
         }
@@ -73,7 +73,6 @@ class GameManager: ObservableObject {
         case .newYorkTimesScramble:
             lettersWithoutKey.shuffle()
         }
-//        lettersWithoutKey.shuffle()
     }
 
 //    generates new letters
@@ -172,16 +171,16 @@ class GameManager: ObservableObject {
         score += scoreForWord(word: currentWord)
     }
     
-    //    A four-letter word scores one point
-    //    A pangram scores an additional 10 points
     //    words score points equal to their length
     private func scoreForWord(word: [String]) -> Int {
         var currentWordScore = 0
         
+        //    A four-letter word scores one point
         if word.count == 4 {
             currentWordScore += 1
         }
         else {
+            //    A pangram scores an additional 10 points
             if isPangram(word: word){
                 currentWordScore += 10
             }
