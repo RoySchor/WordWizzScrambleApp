@@ -21,6 +21,7 @@ struct GameTitleView: View {
             Text(" ")
         }
         .background(Color(red: 74/253, green: 161/253, blue: 212/253).gradient)
+        .cornerRadius(15)
     }
 }
 

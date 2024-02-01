@@ -11,12 +11,10 @@ struct RootView: View {
     @EnvironmentObject var gameManager : GameManager
     @State private var showPreferences = false
     @State private var showHints = false
-    @State private var showGameInfo = false
+    @State private var showGameInfo = true
     
     var body: some View {
         ZStack {
-//            Color(Constants.BackgroundColorName.bkColor)
-//                .ignoresSafeArea()
             VStack {
                 GameTitleView()
                 Spacer()
@@ -32,9 +30,14 @@ struct RootView: View {
                 Spacer()
                     .frame(height: 330)
             }
-
-            NYTKeyboardView()
-                .offset(y: 120)
+            
+            if gameManager.gameType == .regularScramble {
+                ScrambleKeyboardView()
+                    .offset(y: 120)
+            } else if gameManager.gameType == .newYorkTimesScramble {
+                NYTKeyboardView()
+                    .offset(y: 120)
+            }
             
             VStack
             {

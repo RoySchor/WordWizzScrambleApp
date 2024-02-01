@@ -19,13 +19,17 @@ struct CurrentLettersView: View {
                     Text(String(letter))
                         .font(.largeTitle)
                         .bold()
-                        .foregroundColor(letter == gameManager.keyLetter ? .yellow : .primary)
+                        .foregroundColor(shouldHighlightLetter(letter: letter) ? .yellow : .primary)
                 }
                 
             }
             .frame(maxWidth: .infinity, maxHeight: 100)
             .padding(.horizontal)
         }
+    }
+    
+    private func shouldHighlightLetter(letter: String) -> Bool {
+        gameManager.gameType == .newYorkTimesScramble && letter == gameManager.keyLetter
     }
 }
 

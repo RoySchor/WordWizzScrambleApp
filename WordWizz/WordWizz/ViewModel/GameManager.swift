@@ -67,14 +67,13 @@ class GameManager: ObservableObject {
     }
     
     func shuffleLetters() {
-//        if let centerIndex = letters.firstIndex(of: centerLetter) {
-//            letters.remove(at: centerIndex)
-//            letters.shuffle()
-//            letters.insert(centerLetter, at: centerIndex)
-//        } else {
-//            letters.shuffle()
-//        }
-        lettersWithoutKey.shuffle()
+        switch gameType {
+        case .regularScramble:
+            letters.shuffle()
+        case .newYorkTimesScramble:
+            lettersWithoutKey.shuffle()
+        }
+//        lettersWithoutKey.shuffle()
     }
 
 //    generates new letters
@@ -88,9 +87,16 @@ class GameManager: ObservableObject {
         
     func possibleWords() -> [String] {
         let setOfLetters = Set(letters.joined())
+        
         return wordsList.filter { word in
             let wordLetters = Set(word)
-            return wordLetters.isSubset(of: setOfLetters) && word.contains(keyLetter) && word.count >= 4
+            
+            switch gameType {
+            case .regularScramble:
+                return wordLetters.isSubset(of: setOfLetters) && word.count >= 4
+            case .newYorkTimesScramble:
+                return wordLetters.isSubset(of: setOfLetters) && word.contains(keyLetter) && word.count >= 4
+            }
         }
     }
     
@@ -114,15 +120,33 @@ class GameManager: ObservableObject {
     }
     
     private func generateNewLetters() {
-//        Switches to correct language
+        setLanguage()
+        
+        let uniqueCharCount = setGameSize()
+        
+//        Filters the words list to those words of unique chars
+        let filteredWords = wordsList.filter { Set($0).count == uniqueCharCount }
+        
+//        selects a random element and grabs its unique chars
+        let uniqueCharacters = Set(filteredWords.randomElement()!)
+        letters = uniqueCharacters.map { String($0) }
+        keyLetter = letters.first!
+        lettersWithoutKey = letters
+        lettersWithoutKey.remove(at: lettersWithoutKey.firstIndex(of: keyLetter)!)
+    }
+    
+    private func setLanguage() {
+        //        Switches to correct language
         switch language {
         case .english:
             wordsList = EnglishWords.words
         case .french:
             wordsList = FrenchWords.words
         }
-        
-//        Switches to correct problem size
+    }
+    
+    private func setGameSize() -> Int {
+        //        Switches to correct problem size
         let uniqueCharCount: Int
         switch problemSize {
         case .small:
@@ -133,14 +157,7 @@ class GameManager: ObservableObject {
             uniqueCharCount = 7
         }
         
-//        Filters the words list to those words of unique chars
-        let filteredWords = wordsList.filter { Set($0).count == uniqueCharCount }
-//        selects a random element and grabs its unique chars
-        let uniqueCharacters = Set(filteredWords.randomElement()!)
-        letters = uniqueCharacters.map { String($0) }
-        keyLetter = letters.first!
-        lettersWithoutKey = letters
-        lettersWithoutKey.remove(at: lettersWithoutKey.firstIndex(of: keyLetter)!)
+        return uniqueCharCount
     }
 
     private func updateWordValidity() {

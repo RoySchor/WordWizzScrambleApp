@@ -14,7 +14,7 @@ struct GameSelectorView: View {
     var body: some View {
         VStack {
             Spacer()
-                .frame(height: 25)
+                .frame(height: 55)
             
             titleOfView(title: "Welcome to Word Wizz")
                 .cornerRadius(15)
@@ -57,7 +57,7 @@ struct GameSelectorView: View {
                         .bold()
                 }
             }
-            .frame(height: 600)
+            .frame(height: 560)
             .background(Color(Constants.BackgroundColorName.bkColor).gradient)
             .scrollContentBackground(.hidden)
             
@@ -70,8 +70,8 @@ struct GameSelectorView: View {
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(Constants.BackgroundColorName.bkColor).gradient)
         
-        Spacer()
-            .frame(height: 15)
+//        Spacer()
+//            .frame(height: 15)
     }
     
     private func titleOfView(title: String) -> some View {
