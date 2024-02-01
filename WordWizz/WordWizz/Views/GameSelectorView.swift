@@ -13,24 +13,14 @@ struct GameSelectorView: View {
     
     var body: some View {
         VStack {
-//            Spacer()
-//                .frame(height: 4)
+            Spacer()
+                .frame(height: 25)
             titleOfView(title: "Welcome to Word Wizz")
+                .cornerRadius(15)
             Spacer()
-                .frame(height: 10)
+                .frame(height: 20)
             
-            HStack {
-                Spacer()
-                    .frame(width: 310)
-                Button("Close") {
-                    showGameInfo.toggle()
-                }
-                .font(.system(size: 25))
-            }
-            Spacer()
-                .frame(height: 5)
-            
-            Text("There are two game types:")
+            Text("Choose your game:")
                 .font(.system(size: 20, weight: .medium))
             
             Picker("Game Type", selection: $gameManager.gameType) {
@@ -53,10 +43,11 @@ struct GameSelectorView: View {
                     Text("Game Instructions")
                         .bold()
                 }
+                
                 Section {
                     LabeledContent("3 letters or less", value: "0 points/ not allowed")
                     LabeledContent("4 letters", value: "1 point")
-                    LabeledContent("5 letters or more", value: "their length = # of points")
+                    LabeledContent("5 letters or more", value: "1 point per letter")
                     LabeledContent("Panagram", value: "10 points + their length")
                     Text("Panagram: A word that uses all the available letters")
                         .bold()
@@ -65,7 +56,9 @@ struct GameSelectorView: View {
                         .bold()
                 }
             }
-            .frame(height: 400)
+            .frame(height: 600)
+            .background(Color(Constants.BackgroundColorName.bkColor).gradient)
+            .scrollContentBackground(.hidden)
             
             Button("Ready to Play?") {
                 showGameInfo.toggle()
@@ -75,6 +68,9 @@ struct GameSelectorView: View {
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color(Constants.BackgroundColorName.bkColor).gradient)
+        
+        Spacer()
+            .frame(height: 15)
     }
     
     private func titleOfView(title: String) -> some View {
