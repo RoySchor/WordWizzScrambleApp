@@ -1,1 +1,2 @@
-# cmpsc-475-spring-2024-RoySchor
+# Word Wizz
+**An IOS Application replicating two version of the Scramble Game**
