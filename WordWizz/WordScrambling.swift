@@ -10,6 +10,7 @@ import Foundation
 struct GamePreferences {
     var language: Language
     var problemSize: ProblemSize
+    var gameType: GameType
 }
 
 struct ScrambleGame {

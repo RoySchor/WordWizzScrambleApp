@@ -1,5 +1,5 @@
 //
-//  LettersButtonView.swift
+//  NYTLettersButtonView.swift
 //  WordWizz
 //
 //  Created by Roy Schor on 1/21/24.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct LettersButtonView: View {
+struct NYTLettersButtonView: View {
     @EnvironmentObject var gameManager : GameManager
     
     var letter: String
@@ -42,6 +42,6 @@ struct LettersButtonView: View {
 }
 
 #Preview {
-    LettersButtonView(letter: "a")
+    NYTLettersButtonView(letter: "a")
         .environmentObject(GameManager())
 }

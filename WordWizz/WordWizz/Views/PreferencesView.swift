@@ -46,6 +46,7 @@ struct PreferencesView: View {
                 Button("Close") {
                     showPreferences.toggle()
                 }
+                .font(.system(size: 20))
             }
         }
     }

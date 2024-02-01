@@ -28,6 +28,11 @@ class GameManager: ObservableObject {
             newGame()
         }
     }
+    @Published var gameType: GameType = .regularScramble {
+        didSet {
+            newGame()
+        }
+    }
     
     init() {
         generateNewLetters()

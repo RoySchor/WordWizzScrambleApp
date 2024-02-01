@@ -11,6 +11,7 @@ struct ActionButtonsView: View {
     @EnvironmentObject var gameManager : GameManager
     @Binding var showPreferences : Bool
     @Binding var showHints : Bool
+    @Binding var showGameInfo : Bool
     
     var body: some View {
         HStack(spacing: 10) {
@@ -51,7 +52,7 @@ struct ActionButtonsView: View {
         Spacer()
             .frame(height: 20)
         
-        HStack(spacing: 17) {
+        HStack(spacing: 6) {
 //            Shuffle Button
             Button {
                 gameManager.shuffleLetters()
@@ -66,7 +67,26 @@ struct ActionButtonsView: View {
             }
             
             Spacer()
-                .frame(width: 10)
+                .frame(width: 9)
+            
+            Button {
+                showGameInfo.toggle()
+            } label: {
+                Image(systemName: "questionmark")
+                    .font(.system(size: 40, weight: .heavy))
+                    .bold()
+                    .frame(width: 55, height: 55)
+                    .foregroundColor(.primary)
+                    .background(Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
+                    .cornerRadius(15)
+            }
+            .sheet(isPresented: $showGameInfo, content: {
+                GameSelectorView(showGameInfo: $showGameInfo)
+                    .environmentObject(gameManager)
+            })
+            
+            Spacer()
+                .frame(width: 9)
             
 //            Preferences Settings Button
             Button {
@@ -86,7 +106,7 @@ struct ActionButtonsView: View {
             })
             
             Spacer()
-                .frame(width: 10)
+                .frame(width: 9)
             
 //            Hints Button
             Button {
@@ -106,7 +126,7 @@ struct ActionButtonsView: View {
             })
             
             Spacer()
-                .frame(width: 10)
+                .frame(width: 9)
             
 //            New Game Button
             Button {
@@ -134,6 +154,6 @@ struct ActionButtonsView: View {
 }
 
 #Preview {
-    ActionButtonsView(showPreferences: .constant(false), showHints: .constant(true))
+    ActionButtonsView(showPreferences: .constant(false), showHints: .constant(false), showGameInfo: .constant(false))
         .environmentObject(GameManager())
 }

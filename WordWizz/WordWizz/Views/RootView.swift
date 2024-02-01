@@ -11,6 +11,7 @@ struct RootView: View {
     @EnvironmentObject var gameManager : GameManager
     @State private var showPreferences = false
     @State private var showHints = false
+    @State private var showGameInfo = false
     
     var body: some View {
         ZStack {
@@ -32,7 +33,7 @@ struct RootView: View {
                     .frame(height: 330)
             }
 
-            KeyboardView()
+            NYTKeyboardView()
                 .offset(y: 120)
             
             VStack
@@ -40,7 +41,7 @@ struct RootView: View {
                 Spacer()
                     .frame(height: 620)
                 
-                ActionButtonsView(showPreferences: $showPreferences, showHints: $showHints)
+                ActionButtonsView(showPreferences: $showPreferences, showHints: $showHints, showGameInfo: $showGameInfo)
                     .environmentObject(gameManager)
                 Spacer()
                     .frame(height: 20)

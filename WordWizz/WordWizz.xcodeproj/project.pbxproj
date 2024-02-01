@@ -25,12 +25,13 @@
 		9CBBEBA72B5DEB74009E366D /* CurrentScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */; };
 		9CBBEBA92B5DF352009E366D /* FoundWordsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA82B5DF352009E366D /* FoundWordsView.swift */; };
 		9CBBEBAB2B5DF6CB009E366D /* CurrentLettersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAA2B5DF6CB009E366D /* CurrentLettersView.swift */; };
-		9CBBEBAD2B5DFD7D009E366D /* LettersButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAC2B5DFD7D009E366D /* LettersButtonView.swift */; };
-		9CBBEBAF2B5E0464009E366D /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAE2B5E0463009E366D /* KeyboardView.swift */; };
+		9CBBEBAD2B5DFD7D009E366D /* NYTLettersButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAC2B5DFD7D009E366D /* NYTLettersButtonView.swift */; };
+		9CBBEBAF2B5E0464009E366D /* NYTKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBAE2B5E0463009E366D /* NYTKeyboardView.swift */; };
 		9CBBEBB32B5E3DCD009E366D /* ActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB22B5E3DCD009E366D /* ActionButtonsView.swift */; };
 		9CBBEBB52B5ED635009E366D /* WordScrambling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB42B5ED635009E366D /* WordScrambling.swift */; };
 		9CBBEBB92B5EEFD7009E366D /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB82B5EEFD7009E366D /* GameManager.swift */; };
 		9CBBEBBE2B5F22EA009E366D /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBBD2B5F22EA009E366D /* Words.swift */; };
+		9CEB96F62B6B1B17007298CD /* GameSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB96F52B6B1B17007298CD /* GameSelectorView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,12 +73,13 @@
 		9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentScoreView.swift; sourceTree = "<group>"; };
 		9CBBEBA82B5DF352009E366D /* FoundWordsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoundWordsView.swift; sourceTree = "<group>"; };
 		9CBBEBAA2B5DF6CB009E366D /* CurrentLettersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentLettersView.swift; sourceTree = "<group>"; };
-		9CBBEBAC2B5DFD7D009E366D /* LettersButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LettersButtonView.swift; sourceTree = "<group>"; };
-		9CBBEBAE2B5E0463009E366D /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
+		9CBBEBAC2B5DFD7D009E366D /* NYTLettersButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTLettersButtonView.swift; sourceTree = "<group>"; };
+		9CBBEBAE2B5E0463009E366D /* NYTKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NYTKeyboardView.swift; sourceTree = "<group>"; };
 		9CBBEBB22B5E3DCD009E366D /* ActionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonsView.swift; sourceTree = "<group>"; };
 		9CBBEBB42B5ED635009E366D /* WordScrambling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambling.swift; sourceTree = SOURCE_ROOT; };
 		9CBBEBB82B5EEFD7009E366D /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
 		9CBBEBBD2B5F22EA009E366D /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
+		9CEB96F52B6B1B17007298CD /* GameSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,13 +176,14 @@
 				9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */,
 				9CBBEBA82B5DF352009E366D /* FoundWordsView.swift */,
 				9CBBEBAA2B5DF6CB009E366D /* CurrentLettersView.swift */,
-				9CBBEBAC2B5DFD7D009E366D /* LettersButtonView.swift */,
-				9CBBEBAE2B5E0463009E366D /* KeyboardView.swift */,
+				9CBBEBAC2B5DFD7D009E366D /* NYTLettersButtonView.swift */,
+				9CBBEBAE2B5E0463009E366D /* NYTKeyboardView.swift */,
 				9CBBEBB22B5E3DCD009E366D /* ActionButtonsView.swift */,
 				9C62C5E82B630D1200E6DB43 /* PreferencesView.swift */,
 				9C62C5EC2B68167A00E6DB43 /* WhatLanguageView.swift */,
 				9C62C5EE2B681F2D00E6DB43 /* HintsView.swift */,
 				9C62C5F22B68659E00E6DB43 /* PolygonShape.swift */,
+				9CEB96F52B6B1B17007298CD /* GameSelectorView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 			files = (
 				9C62C5F32B68659E00E6DB43 /* PolygonShape.swift in Sources */,
 				9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */,
+				9CEB96F62B6B1B17007298CD /* GameSelectorView.swift in Sources */,
 				9C62C5EB2B66F6E000E6DB43 /* FrenchWords.swift in Sources */,
 				9CBBEBB92B5EEFD7009E366D /* GameManager.swift in Sources */,
 				9C62C5E52B6306D300E6DB43 /* GamePreferences.swift in Sources */,
@@ -345,10 +349,10 @@
 				9CBBEBA72B5DEB74009E366D /* CurrentScoreView.swift in Sources */,
 				9C00075E2B55EC18002325DF /* WordWizzApp.swift in Sources */,
 				9C0007A22B56AC05002325DF /* constants.swift in Sources */,
-				9CBBEBAF2B5E0464009E366D /* KeyboardView.swift in Sources */,
+				9CBBEBAF2B5E0464009E366D /* NYTKeyboardView.swift in Sources */,
 				9CBBEBBE2B5F22EA009E366D /* Words.swift in Sources */,
 				9C62C5E92B630D1200E6DB43 /* PreferencesView.swift in Sources */,
-				9CBBEBAD2B5DFD7D009E366D /* LettersButtonView.swift in Sources */,
+				9CBBEBAD2B5DFD7D009E366D /* NYTLettersButtonView.swift in Sources */,
 				9C62C5ED2B68167A00E6DB43 /* WhatLanguageView.swift in Sources */,
 				9CBBEBA52B5DEA55009E366D /* GameTitleView.swift in Sources */,
 			);

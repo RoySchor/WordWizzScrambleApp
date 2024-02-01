@@ -19,3 +19,9 @@ enum ProblemSize: Int, CaseIterable, Identifiable {
     case large = 7
     var id : Int {self.rawValue}
 }
+
+enum GameType: String, CaseIterable, Identifiable {
+    case regularScramble = "Regular Scramble"
+    case newYorkTimesScramble = "New York Times Scramble"
+    var id : String {self.rawValue}
+}

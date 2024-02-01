@@ -18,7 +18,7 @@ struct HintsView: View {
             Form {
                 Section {
                     LabeledContent("Your Letters", value: gameManager.letters.joined(separator: ", "))
-                    LabeledContent("Number of Words Found", value: String(gameManager.foundWords.count))
+                    LabeledContent("Numberx  of Words Found", value: String(gameManager.foundWords.count))
                     LabeledContent("Current Score", value: String(gameManager.score))
                 } header: {
                     Text("Your Current Stats")
@@ -55,6 +55,7 @@ struct HintsView: View {
                 Button("Close") {
                     showHints.toggle()
                 }
+                .font(.system(size: 20))
             }
         }
     }
