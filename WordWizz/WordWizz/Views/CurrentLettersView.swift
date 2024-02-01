@@ -12,21 +12,24 @@ struct CurrentLettersView: View {
     var currentLetters: [String]
     
     var body: some View {
-        HStack(spacing: 20) {
-            ForEach(Array(currentLetters.enumerated()), id: \.offset) {
-                index, letter in
-                Text(String(letter))
-                    .font(.largeTitle)
-                    .bold()
-                    .foregroundColor(letter == gameManager.keyLetter ? .yellow : .primary)
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(spacing: 20) {
+                ForEach(Array(currentLetters.enumerated()), id: \.offset) {
+                    index, letter in
+                    Text(String(letter))
+                        .font(.largeTitle)
+                        .bold()
+                        .foregroundColor(letter == gameManager.keyLetter ? .yellow : .primary)
+                }
+                
             }
-            
+            .frame(maxWidth: .infinity, maxHeight: 100)
+            .padding(.horizontal)
         }
-        .frame(maxWidth: .infinity, maxHeight: 100)
     }
 }
 
 #Preview {
-    CurrentLettersView(currentLetters: ["a", "n", "t", "b", "e", "c"])
+    CurrentLettersView(currentLetters: ["a", "n", "t", "b", "e", "c", "n", "t", "b", "e", "c"])
         .environmentObject(GameManager())
 }

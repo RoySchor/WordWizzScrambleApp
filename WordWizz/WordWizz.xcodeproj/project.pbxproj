@@ -14,6 +14,8 @@
 		9C0007792B55EC21002325DF /* WordWizzUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007782B55EC21002325DF /* WordWizzUITests.swift */; };
 		9C00077B2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C00077A2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift */; };
 		9C0007A22B56AC05002325DF /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A12B56AC05002325DF /* constants.swift */; };
+		9C46E8DF2B6B493900781E34 /* ScrambleLetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46E8DE2B6B493900781E34 /* ScrambleLetterButtonView.swift */; };
+		9C46E8E12B6B4A0D00781E34 /* ScrambleKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46E8E02B6B4A0D00781E34 /* ScrambleKeyboardView.swift */; };
 		9C62C5E52B6306D300E6DB43 /* GamePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5E42B6306D300E6DB43 /* GamePreferences.swift */; };
 		9C62C5E92B630D1200E6DB43 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5E82B630D1200E6DB43 /* PreferencesView.swift */; };
 		9C62C5EB2B66F6E000E6DB43 /* FrenchWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5EA2B66F6E000E6DB43 /* FrenchWords.swift */; };
@@ -62,6 +64,8 @@
 		9C0007782B55EC21002325DF /* WordWizzUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordWizzUITests.swift; sourceTree = "<group>"; };
 		9C00077A2B55EC21002325DF /* WordWizzUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordWizzUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		9C0007A12B56AC05002325DF /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		9C46E8DE2B6B493900781E34 /* ScrambleLetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleLetterButtonView.swift; sourceTree = "<group>"; };
+		9C46E8E02B6B4A0D00781E34 /* ScrambleKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleKeyboardView.swift; sourceTree = "<group>"; };
 		9C62C5E42B6306D300E6DB43 /* GamePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePreferences.swift; sourceTree = "<group>"; };
 		9C62C5E82B630D1200E6DB43 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
 		9C62C5EA2B66F6E000E6DB43 /* FrenchWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrenchWords.swift; sourceTree = "<group>"; };
@@ -184,6 +188,8 @@
 				9C62C5EE2B681F2D00E6DB43 /* HintsView.swift */,
 				9C62C5F22B68659E00E6DB43 /* PolygonShape.swift */,
 				9CEB96F52B6B1B17007298CD /* GameSelectorView.swift */,
+				9C46E8DE2B6B493900781E34 /* ScrambleLetterButtonView.swift */,
+				9C46E8E02B6B4A0D00781E34 /* ScrambleKeyboardView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -335,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C46E8E12B6B4A0D00781E34 /* ScrambleKeyboardView.swift in Sources */,
 				9C62C5F32B68659E00E6DB43 /* PolygonShape.swift in Sources */,
 				9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */,
 				9CEB96F62B6B1B17007298CD /* GameSelectorView.swift in Sources */,
@@ -354,6 +361,7 @@
 				9C62C5E92B630D1200E6DB43 /* PreferencesView.swift in Sources */,
 				9CBBEBAD2B5DFD7D009E366D /* NYTLettersButtonView.swift in Sources */,
 				9C62C5ED2B68167A00E6DB43 /* WhatLanguageView.swift in Sources */,
+				9C46E8DF2B6B493900781E34 /* ScrambleLetterButtonView.swift in Sources */,
 				9CBBEBA52B5DEA55009E366D /* GameTitleView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

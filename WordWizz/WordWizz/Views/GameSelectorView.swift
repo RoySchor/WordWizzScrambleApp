@@ -15,6 +15,7 @@ struct GameSelectorView: View {
         VStack {
             Spacer()
                 .frame(height: 25)
+            
             titleOfView(title: "Welcome to Word Wizz")
                 .cornerRadius(15)
             Spacer()
@@ -81,7 +82,7 @@ struct GameSelectorView: View {
                     .font(.system(size: 30))
                     .bold()
                     .foregroundColor(.white)
-                    .frame(height: 50)
+                    .frame(height: 60)
             }
             Text(" ")
         }

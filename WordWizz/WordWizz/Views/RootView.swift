@@ -11,12 +11,12 @@ struct RootView: View {
     @EnvironmentObject var gameManager : GameManager
     @State private var showPreferences = false
     @State private var showHints = false
-    @State private var showGameInfo = true
+    @State private var showGameInfo = false
     
     var body: some View {
         ZStack {
-            Color(Constants.BackgroundColorName.bkColor)
-                .ignoresSafeArea()
+//            Color(Constants.BackgroundColorName.bkColor)
+//                .ignoresSafeArea()
             VStack {
                 GameTitleView()
                 Spacer()
@@ -60,6 +60,8 @@ struct RootView: View {
                     .position(x: UIScreen.main.bounds.width / 2, y: UIScreen.main.bounds.height / 6)
             }
         }
+        .containerRelativeFrame([.horizontal, .vertical])
+        .background(Gradient(colors: [.teal, .cyan, .green]).opacity(0.5))
     }
 }
 
