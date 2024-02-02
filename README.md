@@ -36,4 +36,7 @@ From here, the user enters the game and is able to play whichever game they sele
 
   #### Visual of Game Functionality
 
-  
+
+https://github.com/RoySchor/WordWizzScrambleApp/assets/70181314/83543d3e-184a-4985-ad77-4e4ac1cc47d0
+
+
