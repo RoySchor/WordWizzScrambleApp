@@ -23,7 +23,6 @@ class GameManager: ObservableObject {
     @Published var numPangrams: Int = 0
     @Published var maxLength: Int = 0
     
-//    private var possibleWordsCache: [String] = []
     private var wordAttributesCache: [String: (score: Int, isPangram: Bool)] = [:]
     
     @Published var language: Language = .english {
@@ -120,12 +119,11 @@ class GameManager: ObservableObject {
             if !wordLetters.isSubset(of: setOfLetters) {
                 return false
             }
-            return word.count >= 4
+            return word.count >= 3
         }
     }
     
     func maxPossiblePoints() -> Int {
-//        let possibleWords = possibleWords()
         return listPossibleWords.reduce(0) { total, word in
             total + scoreForWord(word: Array(word.map { String($0) }))
         }
@@ -133,23 +131,18 @@ class GameManager: ObservableObject {
     
     func numPossiblePangrams() -> Int {
         return listPossibleWords.filter { isPangram(word: Array($0.map { String($0) })) }.count
-//        return possibleWords().filter { isPangram(word: Array($0.map { String($0) })) }.count
     }
     
     func wordCountStartingWith(letter: String, length: Int) -> Int {
         return listPossibleWords.filter { $0.hasPrefix(letter) && $0.count == length }.count
-//        return possibleWords().filter { $0.hasPrefix(letter) && $0.count == length }.count
     }
     
     func maxLengthOfWords() -> Int {
         return listPossibleWords.map { $0.count }.max()!
-//        return possibleWords().map { $0.count }.max()!
     }
     
     private func setPossibleWords() {
         listPossibleWords = possibleWords()
-        
-//        possibleWordsCache = possibleWords()
     }
     
     private func setMaxPossiblePoints() {
@@ -165,8 +158,6 @@ class GameManager: ObservableObject {
     }
     
     private func generateNewLetters() {
-//        setLanguage()
-        
         let uniqueCharCount = setGameSize()
         
 //        Filters the words list to those words of unique chars
@@ -193,6 +184,11 @@ class GameManager: ObservableObject {
             let wordsData = FileManager.default.contents(atPath: wordsFilePath)!
             let json = try! JSONSerialization.jsonObject(with: wordsData, options: []) as! [String: [String]]
             wordsList = json["words"]!
+        case .spanish:
+            let wordsFilePath = Bundle.main.path(forResource: "AllSpanishWords", ofType: "json")!
+            let wordsData = FileManager.default.contents(atPath: wordsFilePath)!
+            let json = try! JSONSerialization.jsonObject(with: wordsData, options: []) as! [String: [String]]
+            wordsList = json["words"]!
         }
     }
     
@@ -212,7 +208,7 @@ class GameManager: ObservableObject {
     }
 
     private func updateWordValidity() {
-        if currentWord.count >= 4 {
+        if currentWord.count >= 3 {
             switch gameType {
             case .regularScramble, .newYorkTimesScramble:
                 if gameType == .newYorkTimesScramble && !currentWord.contains(keyLetter) {
@@ -222,35 +218,18 @@ class GameManager: ObservableObject {
                 
                 var segmentedWordList = [String]()
                 if language == .english {
-//                    segmentedWordList = English\(currentWord.count)Letters.words
                     segmentedWordList = WordLists.englishWordsByCount[currentWord.count]!
                 } else if language == .french {
-//                    segmentedWordList = french_words_\(currentWord.count)_letters.words
                     segmentedWordList = WordLists.frenchWordsByCount[currentWord.count]!
 
+                } else if language == .spanish {
+                    segmentedWordList = WordLists.spanishWordsByCount[currentWord.count]!
                 }
                 
                 isWordValid = segmentedWordList.contains(currentWord.joined())
             }
         } else {
             isWordValid = false
-        }
-    }
-    
-    private func updateWordValidity2() {
-        switch gameType {
-        case .regularScramble:
-            if currentWord.count >= 4 && wordsList.contains(currentWord.joined()) {
-                isWordValid = true
-            } else {
-                isWordValid = false
-            }
-        case .newYorkTimesScramble:
-            if currentWord.count >= 4 && currentWord.contains(keyLetter) && wordsList.contains(currentWord.joined()) {
-                isWordValid = true
-            } else {
-                isWordValid = false
-            }
         }
     }
 
@@ -263,7 +242,7 @@ class GameManager: ObservableObject {
         var currentWordScore = 0
         
         //    A four-letter word scores one point
-        if word.count == 4 {
+        if word.count == 3 || word.count == 4 {
             currentWordScore += 1
         } else {
             //    A pangram scores an additional 10 points
@@ -325,6 +304,26 @@ class GameManager: ObservableObject {
             15: french_words_15_letters.words,
             16: french_words_16_letters.words,
             17: french_words_17_letters.words
+        ]
+        
+        static let spanishWordsByCount: [Int: [String]] = [
+            3: Spanish3Letters.words,
+            4: Spanish4Letters.words,
+            5: Spanish5Letters.words,
+            6: Spanish6Letters.words,
+            7: Spanish7Letters.words,
+            8: Spanish8Letters.words,
+            9: Spanish9Letters.words,
+            10: Spanish10Letters.words,
+            11: Spanish11Letters.words,
+            12: Spanish12Letters.words,
+            13: Spanish13Letters.words,
+            14: Spanish14Letters.words,
+            15: Spanish15Letters.words,
+            16: Spanish16Letters.words,
+            17: Spanish17Letters.words,
+            18: Spanish18Letters.words,
+            19: Spanish19Letters.words,
         ]
     }
 }

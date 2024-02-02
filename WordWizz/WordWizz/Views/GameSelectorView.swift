@@ -13,9 +13,6 @@ struct GameSelectorView: View {
     
     var body: some View {
         VStack {
-//            Spacer()
-//                .frame(height: 15)
-            
             titleOfView(title: "Welcome to Word Wizz")
                 .cornerRadius(15)
             Spacer()
@@ -54,8 +51,8 @@ struct GameSelectorView: View {
                 }
                 
                 Section {
-                    LabeledContent("3 letters or less", value: "0 points/ not allowed")
-                    LabeledContent("4 letters", value: "1 point")
+                    LabeledContent("2 letters or less", value: "0 points/ not allowed")
+                    LabeledContent("3 or 4 letters", value: "1 point")
                     LabeledContent("5 letters or more", value: "1 point per letter")
                     LabeledContent("Panagram", value: "10 points + their length")
                     Text("Panagram: A word that uses all the available letters")

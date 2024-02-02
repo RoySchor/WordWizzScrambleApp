@@ -149,6 +149,9 @@ struct ActionButtonsView: View {
             return "Enter"
         case .french:
             return "Retour"
+        case .spanish:
+            return "Intro"
+            
         }
     }
 }

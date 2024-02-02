@@ -39,7 +39,6 @@ struct PreferencesView: View {
                     Text("Difficulty of Game")
                         .bold()
                 }
-                
             }
             .navigationBarTitle("Game Preferences")
             .toolbar {

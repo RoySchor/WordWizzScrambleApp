@@ -10,6 +10,7 @@ import Foundation
 enum Language: String, CaseIterable, Identifiable {
     case english = "English"
     case french = "Français"
+    case spanish = "Español"
     var id : String {self.rawValue}
 }
 

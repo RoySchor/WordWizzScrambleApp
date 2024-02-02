@@ -22,6 +22,8 @@ struct WhatLanguageView: View {
             return "Current Language - \(gameManager.language.rawValue)"
         case .french:
             return "Langue Actuelle - \(gameManager.language.rawValue)"
+        case .spanish:
+            return "Idioma Actual - \(gameManager.language.rawValue)"
         }
     }
 }
