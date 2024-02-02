@@ -13,7 +13,7 @@ In this welcome page, the user is given the option to select their game mode as 
 **New York Times Scramble**
   - Given a set of letters and a key letter highlighted in yellow, create as many valid words as possible. You must use the key letter in every word created.
 
-<img src='WordWizz/WordWizz Welcome Screen.PNG' width="170" height="350">
+<img src='WordWizz/ReadMe Display Files/WordWizz Welcome Screen.PNG' width="170" height="350">
 
 #### Visual of Welcome Screen
 
@@ -25,10 +25,14 @@ From here, the user enters the game and is able to play whichever game they sele
 ## Functionality
 - Switch languages: English, French, Spanish
 - Switch letter bank size: 5 letters, 6 letters, 7 letters
-- Receive current stats, specific hints, and all possible words available to guess from word bank
+- Receive current stats, specific hints, and all possible words available to guess from the word bank
 - Shuffle letters
 - New Game/ get new letters
 - Enter the welcome page and change game modes
+
+**Notes**:
+- When in the NYT scramble game, the shuffle button shuffles all characters besides the key character (the center yellow one)
+- When starting a new game, use the right-most button on the bottom toolbar to reset the score, find words, and view the current character bank.
 
   #### Visual of Game Functionality
 
