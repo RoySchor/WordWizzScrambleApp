@@ -11,14 +11,48 @@
 		9C0007622B55EC20002325DF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0007612B55EC20002325DF /* Assets.xcassets */; };
 		9C0007652B55EC20002325DF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0007642B55EC20002325DF /* Preview Assets.xcassets */; };
 		9C0007A22B56AC05002325DF /* constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0007A12B56AC05002325DF /* constants.swift */; };
+		9C270DC72B6C136E004BEEBB /* AllEnglishWords.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C270DC62B6C136E004BEEBB /* AllEnglishWords.json */; };
+		9C270E0D2B6C7A7B004BEEBB /* AllFrenchWords.json in Resources */ = {isa = PBXBuildFile; fileRef = 9C270E0C2B6C7A7B004BEEBB /* AllFrenchWords.json */; };
 		9C46E8DF2B6B493900781E34 /* ScrambleLetterButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46E8DE2B6B493900781E34 /* ScrambleLetterButtonView.swift */; };
 		9C46E8E12B6B4A0D00781E34 /* ScrambleKeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C46E8E02B6B4A0D00781E34 /* ScrambleKeyboardView.swift */; };
 		9C62C5E52B6306D300E6DB43 /* GamePreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5E42B6306D300E6DB43 /* GamePreferences.swift */; };
 		9C62C5E92B630D1200E6DB43 /* PreferencesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5E82B630D1200E6DB43 /* PreferencesView.swift */; };
-		9C62C5EB2B66F6E000E6DB43 /* FrenchWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5EA2B66F6E000E6DB43 /* FrenchWords.swift */; };
 		9C62C5ED2B68167A00E6DB43 /* WhatLanguageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5EC2B68167A00E6DB43 /* WhatLanguageView.swift */; };
 		9C62C5EF2B681F2D00E6DB43 /* HintsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5EE2B681F2D00E6DB43 /* HintsView.swift */; };
 		9C62C5F32B68659E00E6DB43 /* PolygonShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C62C5F22B68659E00E6DB43 /* PolygonShape.swift */; };
+		9C6822642B6D617600AAD4A2 /* french_words_15_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822562B6D617500AAD4A2 /* french_words_15_letters.swift */; };
+		9C6822652B6D617700AAD4A2 /* french_words_17_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822572B6D617500AAD4A2 /* french_words_17_letters.swift */; };
+		9C6822662B6D617700AAD4A2 /* french_words_5_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822582B6D617500AAD4A2 /* french_words_5_letters.swift */; };
+		9C6822672B6D617700AAD4A2 /* french_words_6_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822592B6D617500AAD4A2 /* french_words_6_letters.swift */; };
+		9C6822682B6D617700AAD4A2 /* french_words_8_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68225A2B6D617500AAD4A2 /* french_words_8_letters.swift */; };
+		9C6822692B6D617700AAD4A2 /* french_words_9_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68225B2B6D617600AAD4A2 /* french_words_9_letters.swift */; };
+		9C68226A2B6D617700AAD4A2 /* french_words_14_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68225C2B6D617600AAD4A2 /* french_words_14_letters.swift */; };
+		9C68226B2B6D617700AAD4A2 /* french_words_4_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68225D2B6D617600AAD4A2 /* french_words_4_letters.swift */; };
+		9C68226C2B6D617700AAD4A2 /* french_words_16_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68225E2B6D617600AAD4A2 /* french_words_16_letters.swift */; };
+		9C68226D2B6D617700AAD4A2 /* french_words_3_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68225F2B6D617600AAD4A2 /* french_words_3_letters.swift */; };
+		9C68226E2B6D617700AAD4A2 /* french_words_13_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822602B6D617600AAD4A2 /* french_words_13_letters.swift */; };
+		9C68226F2B6D617700AAD4A2 /* french_words_12_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822612B6D617600AAD4A2 /* french_words_12_letters.swift */; };
+		9C6822702B6D617700AAD4A2 /* french_words_11_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822622B6D617600AAD4A2 /* french_words_11_letters.swift */; };
+		9C6822712B6D617700AAD4A2 /* french_words_7_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822632B6D617600AAD4A2 /* french_words_7_letters.swift */; };
+		9C6822732B6D619100AAD4A2 /* french_words_10_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822722B6D619100AAD4A2 /* french_words_10_letters.swift */; };
+		9C6822842B6D61A100AAD4A2 /* english_words_17_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822742B6D619F00AAD4A2 /* english_words_17_letters.swift */; };
+		9C6822852B6D61A100AAD4A2 /* english_words_9_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822752B6D619F00AAD4A2 /* english_words_9_letters.swift */; };
+		9C6822862B6D61A100AAD4A2 /* english_words_6_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822762B6D61A000AAD4A2 /* english_words_6_letters.swift */; };
+		9C6822872B6D61A100AAD4A2 /* english_words_16_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822772B6D61A000AAD4A2 /* english_words_16_letters.swift */; };
+		9C6822882B6D61A100AAD4A2 /* english_words_19_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822782B6D61A000AAD4A2 /* english_words_19_letters.swift */; };
+		9C6822892B6D61A100AAD4A2 /* english_words_7_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822792B6D61A000AAD4A2 /* english_words_7_letters.swift */; };
+		9C68228A2B6D61A100AAD4A2 /* english_words_13_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68227A2B6D61A000AAD4A2 /* english_words_13_letters.swift */; };
+		9C68228B2B6D61A100AAD4A2 /* english_words_8_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68227B2B6D61A000AAD4A2 /* english_words_8_letters.swift */; };
+		9C68228C2B6D61A100AAD4A2 /* english_words_4_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68227C2B6D61A000AAD4A2 /* english_words_4_letters.swift */; };
+		9C68228D2B6D61A100AAD4A2 /* english_words_11_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68227D2B6D61A000AAD4A2 /* english_words_11_letters.swift */; };
+		9C68228E2B6D61A100AAD4A2 /* english_words_14_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68227E2B6D61A100AAD4A2 /* english_words_14_letters.swift */; };
+		9C68228F2B6D61A100AAD4A2 /* english_words_12_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C68227F2B6D61A100AAD4A2 /* english_words_12_letters.swift */; };
+		9C6822902B6D61A100AAD4A2 /* english_words_18_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822802B6D61A100AAD4A2 /* english_words_18_letters.swift */; };
+		9C6822912B6D61A100AAD4A2 /* english_words_10_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822812B6D61A100AAD4A2 /* english_words_10_letters.swift */; };
+		9C6822922B6D61A100AAD4A2 /* english_words_5_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822822B6D61A100AAD4A2 /* english_words_5_letters.swift */; };
+		9C6822932B6D61A100AAD4A2 /* english_words_15_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822832B6D61A100AAD4A2 /* english_words_15_letters.swift */; };
+		9C6822952B6D61A600AAD4A2 /* english_words_3_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822942B6D61A600AAD4A2 /* english_words_3_letters.swift */; };
+		9C6822972B6D61AD00AAD4A2 /* english_words_20_letters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C6822962B6D61AD00AAD4A2 /* english_words_20_letters.swift */; };
 		9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA22B5DE135009E366D /* RootView.swift */; };
 		9CBBEBA52B5DEA55009E366D /* GameTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA42B5DEA55009E366D /* GameTitleView.swift */; };
 		9CBBEBA72B5DEB74009E366D /* CurrentScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */; };
@@ -29,7 +63,6 @@
 		9CBBEBB32B5E3DCD009E366D /* ActionButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB22B5E3DCD009E366D /* ActionButtonsView.swift */; };
 		9CBBEBB52B5ED635009E366D /* WordScrambling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB42B5ED635009E366D /* WordScrambling.swift */; };
 		9CBBEBB92B5EEFD7009E366D /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBB82B5EEFD7009E366D /* GameManager.swift */; };
-		9CBBEBBE2B5F22EA009E366D /* Words.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CBBEBBD2B5F22EA009E366D /* Words.swift */; };
 		9CEB96F62B6B1B17007298CD /* GameSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CEB96F52B6B1B17007298CD /* GameSelectorView.swift */; };
 /* End PBXBuildFile section */
 
@@ -58,14 +91,48 @@
 		9C00076A2B55EC20002325DF /* WordWizzTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordWizzTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0007742B55EC20002325DF /* WordWizzUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WordWizzUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0007A12B56AC05002325DF /* constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = constants.swift; sourceTree = "<group>"; };
+		9C270DC62B6C136E004BEEBB /* AllEnglishWords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllEnglishWords.json; sourceTree = "<group>"; };
+		9C270E0C2B6C7A7B004BEEBB /* AllFrenchWords.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AllFrenchWords.json; sourceTree = "<group>"; };
 		9C46E8DE2B6B493900781E34 /* ScrambleLetterButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleLetterButtonView.swift; sourceTree = "<group>"; };
 		9C46E8E02B6B4A0D00781E34 /* ScrambleKeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrambleKeyboardView.swift; sourceTree = "<group>"; };
 		9C62C5E42B6306D300E6DB43 /* GamePreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePreferences.swift; sourceTree = "<group>"; };
 		9C62C5E82B630D1200E6DB43 /* PreferencesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferencesView.swift; sourceTree = "<group>"; };
-		9C62C5EA2B66F6E000E6DB43 /* FrenchWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrenchWords.swift; sourceTree = "<group>"; };
 		9C62C5EC2B68167A00E6DB43 /* WhatLanguageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatLanguageView.swift; sourceTree = "<group>"; };
 		9C62C5EE2B681F2D00E6DB43 /* HintsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintsView.swift; sourceTree = "<group>"; };
 		9C62C5F22B68659E00E6DB43 /* PolygonShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PolygonShape.swift; sourceTree = "<group>"; };
+		9C6822562B6D617500AAD4A2 /* french_words_15_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_15_letters.swift; sourceTree = "<group>"; };
+		9C6822572B6D617500AAD4A2 /* french_words_17_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_17_letters.swift; sourceTree = "<group>"; };
+		9C6822582B6D617500AAD4A2 /* french_words_5_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_5_letters.swift; sourceTree = "<group>"; };
+		9C6822592B6D617500AAD4A2 /* french_words_6_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_6_letters.swift; sourceTree = "<group>"; };
+		9C68225A2B6D617500AAD4A2 /* french_words_8_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_8_letters.swift; sourceTree = "<group>"; };
+		9C68225B2B6D617600AAD4A2 /* french_words_9_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_9_letters.swift; sourceTree = "<group>"; };
+		9C68225C2B6D617600AAD4A2 /* french_words_14_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_14_letters.swift; sourceTree = "<group>"; };
+		9C68225D2B6D617600AAD4A2 /* french_words_4_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_4_letters.swift; sourceTree = "<group>"; };
+		9C68225E2B6D617600AAD4A2 /* french_words_16_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_16_letters.swift; sourceTree = "<group>"; };
+		9C68225F2B6D617600AAD4A2 /* french_words_3_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_3_letters.swift; sourceTree = "<group>"; };
+		9C6822602B6D617600AAD4A2 /* french_words_13_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_13_letters.swift; sourceTree = "<group>"; };
+		9C6822612B6D617600AAD4A2 /* french_words_12_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_12_letters.swift; sourceTree = "<group>"; };
+		9C6822622B6D617600AAD4A2 /* french_words_11_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_11_letters.swift; sourceTree = "<group>"; };
+		9C6822632B6D617600AAD4A2 /* french_words_7_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_7_letters.swift; sourceTree = "<group>"; };
+		9C6822722B6D619100AAD4A2 /* french_words_10_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = french_words_10_letters.swift; sourceTree = "<group>"; };
+		9C6822742B6D619F00AAD4A2 /* english_words_17_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_17_letters.swift; sourceTree = "<group>"; };
+		9C6822752B6D619F00AAD4A2 /* english_words_9_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_9_letters.swift; sourceTree = "<group>"; };
+		9C6822762B6D61A000AAD4A2 /* english_words_6_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_6_letters.swift; sourceTree = "<group>"; };
+		9C6822772B6D61A000AAD4A2 /* english_words_16_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_16_letters.swift; sourceTree = "<group>"; };
+		9C6822782B6D61A000AAD4A2 /* english_words_19_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_19_letters.swift; sourceTree = "<group>"; };
+		9C6822792B6D61A000AAD4A2 /* english_words_7_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_7_letters.swift; sourceTree = "<group>"; };
+		9C68227A2B6D61A000AAD4A2 /* english_words_13_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_13_letters.swift; sourceTree = "<group>"; };
+		9C68227B2B6D61A000AAD4A2 /* english_words_8_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_8_letters.swift; sourceTree = "<group>"; };
+		9C68227C2B6D61A000AAD4A2 /* english_words_4_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_4_letters.swift; sourceTree = "<group>"; };
+		9C68227D2B6D61A000AAD4A2 /* english_words_11_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_11_letters.swift; sourceTree = "<group>"; };
+		9C68227E2B6D61A100AAD4A2 /* english_words_14_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_14_letters.swift; sourceTree = "<group>"; };
+		9C68227F2B6D61A100AAD4A2 /* english_words_12_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_12_letters.swift; sourceTree = "<group>"; };
+		9C6822802B6D61A100AAD4A2 /* english_words_18_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_18_letters.swift; sourceTree = "<group>"; };
+		9C6822812B6D61A100AAD4A2 /* english_words_10_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_10_letters.swift; sourceTree = "<group>"; };
+		9C6822822B6D61A100AAD4A2 /* english_words_5_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_5_letters.swift; sourceTree = "<group>"; };
+		9C6822832B6D61A100AAD4A2 /* english_words_15_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_15_letters.swift; sourceTree = "<group>"; };
+		9C6822942B6D61A600AAD4A2 /* english_words_3_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_3_letters.swift; sourceTree = "<group>"; };
+		9C6822962B6D61AD00AAD4A2 /* english_words_20_letters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = english_words_20_letters.swift; sourceTree = "<group>"; };
 		9CBBEBA22B5DE135009E366D /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		9CBBEBA42B5DEA55009E366D /* GameTitleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTitleView.swift; sourceTree = "<group>"; };
 		9CBBEBA62B5DEB74009E366D /* CurrentScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentScoreView.swift; sourceTree = "<group>"; };
@@ -76,7 +143,6 @@
 		9CBBEBB22B5E3DCD009E366D /* ActionButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionButtonsView.swift; sourceTree = "<group>"; };
 		9CBBEBB42B5ED635009E366D /* WordScrambling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordScrambling.swift; sourceTree = SOURCE_ROOT; };
 		9CBBEBB82B5EEFD7009E366D /* GameManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
-		9CBBEBBD2B5F22EA009E366D /* Words.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Words.swift; sourceTree = "<group>"; };
 		9CEB96F52B6B1B17007298CD /* GameSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSelectorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -126,8 +192,7 @@
 		9C00075C2B55EC18002325DF /* WordWizz */ = {
 			isa = PBXGroup;
 			children = (
-				9C62C5EA2B66F6E000E6DB43 /* FrenchWords.swift */,
-				9CBBEBBD2B5F22EA009E366D /* Words.swift */,
+				9C270DC52B6C123E004BEEBB /* Resources */,
 				9CBBEBA12B5DDDB2009E366D /* Model */,
 				9CBBEB9E2B5DDD8B009E366D /* Views */,
 				9C00075D2B55EC18002325DF /* WordWizzApp.swift */,
@@ -145,6 +210,48 @@
 				9C0007642B55EC20002325DF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		9C270DC52B6C123E004BEEBB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				9C6822942B6D61A600AAD4A2 /* english_words_3_letters.swift */,
+				9C68227C2B6D61A000AAD4A2 /* english_words_4_letters.swift */,
+				9C6822822B6D61A100AAD4A2 /* english_words_5_letters.swift */,
+				9C6822762B6D61A000AAD4A2 /* english_words_6_letters.swift */,
+				9C6822792B6D61A000AAD4A2 /* english_words_7_letters.swift */,
+				9C68227B2B6D61A000AAD4A2 /* english_words_8_letters.swift */,
+				9C6822752B6D619F00AAD4A2 /* english_words_9_letters.swift */,
+				9C6822812B6D61A100AAD4A2 /* english_words_10_letters.swift */,
+				9C68227D2B6D61A000AAD4A2 /* english_words_11_letters.swift */,
+				9C68227F2B6D61A100AAD4A2 /* english_words_12_letters.swift */,
+				9C68227A2B6D61A000AAD4A2 /* english_words_13_letters.swift */,
+				9C68227E2B6D61A100AAD4A2 /* english_words_14_letters.swift */,
+				9C6822832B6D61A100AAD4A2 /* english_words_15_letters.swift */,
+				9C6822772B6D61A000AAD4A2 /* english_words_16_letters.swift */,
+				9C6822742B6D619F00AAD4A2 /* english_words_17_letters.swift */,
+				9C6822802B6D61A100AAD4A2 /* english_words_18_letters.swift */,
+				9C6822782B6D61A000AAD4A2 /* english_words_19_letters.swift */,
+				9C6822962B6D61AD00AAD4A2 /* english_words_20_letters.swift */,
+				9C68225F2B6D617600AAD4A2 /* french_words_3_letters.swift */,
+				9C68225D2B6D617600AAD4A2 /* french_words_4_letters.swift */,
+				9C6822582B6D617500AAD4A2 /* french_words_5_letters.swift */,
+				9C6822592B6D617500AAD4A2 /* french_words_6_letters.swift */,
+				9C6822632B6D617600AAD4A2 /* french_words_7_letters.swift */,
+				9C68225A2B6D617500AAD4A2 /* french_words_8_letters.swift */,
+				9C68225B2B6D617600AAD4A2 /* french_words_9_letters.swift */,
+				9C6822722B6D619100AAD4A2 /* french_words_10_letters.swift */,
+				9C6822622B6D617600AAD4A2 /* french_words_11_letters.swift */,
+				9C6822612B6D617600AAD4A2 /* french_words_12_letters.swift */,
+				9C6822602B6D617600AAD4A2 /* french_words_13_letters.swift */,
+				9C68225C2B6D617600AAD4A2 /* french_words_14_letters.swift */,
+				9C6822562B6D617500AAD4A2 /* french_words_15_letters.swift */,
+				9C68225E2B6D617600AAD4A2 /* french_words_16_letters.swift */,
+				9C6822572B6D617500AAD4A2 /* french_words_17_letters.swift */,
+				9C270E0C2B6C7A7B004BEEBB /* AllFrenchWords.json */,
+				9C270DC62B6C136E004BEEBB /* AllEnglishWords.json */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 		9CAD16502B6BFCBC007F1920 /* NytGame */ = {
@@ -307,6 +414,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C0007652B55EC20002325DF /* Preview Assets.xcassets in Resources */,
+				9C270E0D2B6C7A7B004BEEBB /* AllFrenchWords.json in Resources */,
+				9C270DC72B6C136E004BEEBB /* AllEnglishWords.json in Resources */,
 				9C0007622B55EC20002325DF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,26 +441,57 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C68226F2B6D617700AAD4A2 /* french_words_12_letters.swift in Sources */,
+				9C68226B2B6D617700AAD4A2 /* french_words_4_letters.swift in Sources */,
 				9C46E8E12B6B4A0D00781E34 /* ScrambleKeyboardView.swift in Sources */,
 				9C62C5F32B68659E00E6DB43 /* PolygonShape.swift in Sources */,
+				9C6822672B6D617700AAD4A2 /* french_words_6_letters.swift in Sources */,
+				9C68226E2B6D617700AAD4A2 /* french_words_13_letters.swift in Sources */,
+				9C6822842B6D61A100AAD4A2 /* english_words_17_letters.swift in Sources */,
 				9CBBEBA32B5DE135009E366D /* RootView.swift in Sources */,
+				9C6822712B6D617700AAD4A2 /* french_words_7_letters.swift in Sources */,
+				9C6822652B6D617700AAD4A2 /* french_words_17_letters.swift in Sources */,
 				9CEB96F62B6B1B17007298CD /* GameSelectorView.swift in Sources */,
-				9C62C5EB2B66F6E000E6DB43 /* FrenchWords.swift in Sources */,
+				9C6822902B6D61A100AAD4A2 /* english_words_18_letters.swift in Sources */,
 				9CBBEBB92B5EEFD7009E366D /* GameManager.swift in Sources */,
 				9C62C5E52B6306D300E6DB43 /* GamePreferences.swift in Sources */,
+				9C6822892B6D61A100AAD4A2 /* english_words_7_letters.swift in Sources */,
 				9CBBEBA92B5DF352009E366D /* FoundWordsView.swift in Sources */,
+				9C68228F2B6D61A100AAD4A2 /* english_words_12_letters.swift in Sources */,
 				9CBBEBB32B5E3DCD009E366D /* ActionButtonsView.swift in Sources */,
+				9C6822862B6D61A100AAD4A2 /* english_words_6_letters.swift in Sources */,
+				9C6822852B6D61A100AAD4A2 /* english_words_9_letters.swift in Sources */,
 				9CBBEBB52B5ED635009E366D /* WordScrambling.swift in Sources */,
+				9C6822662B6D617700AAD4A2 /* french_words_5_letters.swift in Sources */,
 				9C62C5EF2B681F2D00E6DB43 /* HintsView.swift in Sources */,
+				9C68228D2B6D61A100AAD4A2 /* english_words_11_letters.swift in Sources */,
+				9C6822972B6D61AD00AAD4A2 /* english_words_20_letters.swift in Sources */,
 				9CBBEBAB2B5DF6CB009E366D /* CurrentLettersView.swift in Sources */,
 				9CBBEBA72B5DEB74009E366D /* CurrentScoreView.swift in Sources */,
+				9C6822932B6D61A100AAD4A2 /* english_words_15_letters.swift in Sources */,
+				9C68228B2B6D61A100AAD4A2 /* english_words_8_letters.swift in Sources */,
 				9C00075E2B55EC18002325DF /* WordWizzApp.swift in Sources */,
+				9C68228C2B6D61A100AAD4A2 /* english_words_4_letters.swift in Sources */,
 				9C0007A22B56AC05002325DF /* constants.swift in Sources */,
+				9C6822922B6D61A100AAD4A2 /* english_words_5_letters.swift in Sources */,
+				9C6822952B6D61A600AAD4A2 /* english_words_3_letters.swift in Sources */,
 				9CBBEBAF2B5E0464009E366D /* NYTKeyboardView.swift in Sources */,
-				9CBBEBBE2B5F22EA009E366D /* Words.swift in Sources */,
+				9C6822702B6D617700AAD4A2 /* french_words_11_letters.swift in Sources */,
+				9C68226A2B6D617700AAD4A2 /* french_words_14_letters.swift in Sources */,
+				9C68228E2B6D61A100AAD4A2 /* english_words_14_letters.swift in Sources */,
 				9C62C5E92B630D1200E6DB43 /* PreferencesView.swift in Sources */,
+				9C6822872B6D61A100AAD4A2 /* english_words_16_letters.swift in Sources */,
+				9C6822912B6D61A100AAD4A2 /* english_words_10_letters.swift in Sources */,
 				9CBBEBAD2B5DFD7D009E366D /* NYTLettersButtonView.swift in Sources */,
+				9C68226C2B6D617700AAD4A2 /* french_words_16_letters.swift in Sources */,
+				9C6822642B6D617600AAD4A2 /* french_words_15_letters.swift in Sources */,
 				9C62C5ED2B68167A00E6DB43 /* WhatLanguageView.swift in Sources */,
+				9C68228A2B6D61A100AAD4A2 /* english_words_13_letters.swift in Sources */,
+				9C68226D2B6D617700AAD4A2 /* french_words_3_letters.swift in Sources */,
+				9C6822682B6D617700AAD4A2 /* french_words_8_letters.swift in Sources */,
+				9C6822692B6D617700AAD4A2 /* french_words_9_letters.swift in Sources */,
+				9C6822882B6D61A100AAD4A2 /* english_words_19_letters.swift in Sources */,
+				9C6822732B6D619100AAD4A2 /* french_words_10_letters.swift in Sources */,
 				9C46E8DF2B6B493900781E34 /* ScrambleLetterButtonView.swift in Sources */,
 				9CBBEBA52B5DEA55009E366D /* GameTitleView.swift in Sources */,
 			);

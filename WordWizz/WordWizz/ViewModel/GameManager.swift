@@ -17,9 +17,18 @@ class GameManager: ObservableObject {
     @Published var keyLetter: String = ""
     @Published var lettersWithoutKey: [String] = []
     
-    @Published var wordsList: [String] = EnglishWords.words
+    @Published var wordsList: [String] = []
+    @Published var listPossibleWords: [String] = []
+    @Published var maxPossibleScore: Int = 0
+    @Published var numPangrams: Int = 0
+    @Published var maxLength: Int = 0
+    
+//    private var possibleWordsCache: [String] = []
+    private var wordAttributesCache: [String: (score: Int, isPangram: Bool)] = [:]
+    
     @Published var language: Language = .english {
         didSet {
+            setLanguage()
             newGame()
         }
     }
@@ -35,7 +44,12 @@ class GameManager: ObservableObject {
     }
     
     init() {
+        setLanguage()
         generateNewLetters()
+        setPossibleWords()
+        setMaxPossiblePoints()
+        setNumPossiblePangrams()
+        setMaxLengthOfWords()
     }
     
     func addLetter(letter: String) {
@@ -79,6 +93,10 @@ class GameManager: ObservableObject {
 //    Resets the score, current word and found words
     func newGame() {
         generateNewLetters()
+        setPossibleWords()
+        setMaxPossiblePoints()
+        setNumPossiblePangrams()
+        setMaxLengthOfWords()
         currentWord = []
         foundWords = []
         score = 0
@@ -86,40 +104,68 @@ class GameManager: ObservableObject {
         
     func possibleWords() -> [String] {
         let setOfLetters = Set(letters.joined())
+
+        var preFilteredWords: [String]
+        if gameType == .newYorkTimesScramble {
+            preFilteredWords = wordsList.filter { word in
+                word.contains(keyLetter)
+            }
+        } else {
+            preFilteredWords = wordsList
+        }
         
-        return wordsList.filter { word in
+        return preFilteredWords.filter { word in
             let wordLetters = Set(word)
             
-            switch gameType {
-            case .regularScramble:
-                return wordLetters.isSubset(of: setOfLetters) && word.count >= 4
-            case .newYorkTimesScramble:
-                return wordLetters.isSubset(of: setOfLetters) && word.contains(keyLetter) && word.count >= 4
+            if !wordLetters.isSubset(of: setOfLetters) {
+                return false
             }
+            return word.count >= 4
         }
     }
     
     func maxPossiblePoints() -> Int {
-        let possibleWords = possibleWords()
-        return possibleWords.reduce(0) { total, word in
+//        let possibleWords = possibleWords()
+        return listPossibleWords.reduce(0) { total, word in
             total + scoreForWord(word: Array(word.map { String($0) }))
         }
     }
     
     func numPossiblePangrams() -> Int {
-        return possibleWords().filter { isPangram(word: Array($0.map { String($0) })) }.count
+        return listPossibleWords.filter { isPangram(word: Array($0.map { String($0) })) }.count
+//        return possibleWords().filter { isPangram(word: Array($0.map { String($0) })) }.count
     }
     
     func wordCountStartingWith(letter: String, length: Int) -> Int {
-        return possibleWords().filter { $0.hasPrefix(letter) && $0.count == length }.count
+        return listPossibleWords.filter { $0.hasPrefix(letter) && $0.count == length }.count
+//        return possibleWords().filter { $0.hasPrefix(letter) && $0.count == length }.count
     }
     
     func maxLengthOfWords() -> Int {
-        return possibleWords().map { $0.count }.max()!
+        return listPossibleWords.map { $0.count }.max()!
+//        return possibleWords().map { $0.count }.max()!
+    }
+    
+    private func setPossibleWords() {
+        listPossibleWords = possibleWords()
+        
+//        possibleWordsCache = possibleWords()
+    }
+    
+    private func setMaxPossiblePoints() {
+        maxPossibleScore = maxPossiblePoints()
+    }
+    
+    private func setNumPossiblePangrams() {
+        numPangrams = numPossiblePangrams()
+    }
+    
+    private func setMaxLengthOfWords() {
+        maxLength = maxLengthOfWords()
     }
     
     private func generateNewLetters() {
-        setLanguage()
+//        setLanguage()
         
         let uniqueCharCount = setGameSize()
         
@@ -138,9 +184,15 @@ class GameManager: ObservableObject {
         //        Switches to correct language
         switch language {
         case .english:
-            wordsList = EnglishWords.words
+            let wordsFilePath = Bundle.main.path(forResource: "AllEnglishWords", ofType: "json")!
+            let wordsData = FileManager.default.contents(atPath: wordsFilePath)!
+            let json = try! JSONSerialization.jsonObject(with: wordsData, options: []) as! [String: [String]]
+            wordsList = json["words"]!
         case .french:
-            wordsList = FrenchWords.words
+            let wordsFilePath = Bundle.main.path(forResource: "AllFrenchWords", ofType: "json")!
+            let wordsData = FileManager.default.contents(atPath: wordsFilePath)!
+            let json = try! JSONSerialization.jsonObject(with: wordsData, options: []) as! [String: [String]]
+            wordsList = json["words"]!
         }
     }
     
@@ -160,10 +212,45 @@ class GameManager: ObservableObject {
     }
 
     private func updateWordValidity() {
-        if currentWord.count >= 4 && currentWord.contains(keyLetter) && wordsList.contains(currentWord.joined()) {
-            isWordValid = true
+        if currentWord.count >= 4 {
+            switch gameType {
+            case .regularScramble, .newYorkTimesScramble:
+                if gameType == .newYorkTimesScramble && !currentWord.contains(keyLetter) {
+                    isWordValid = false
+                    return
+                }
+                
+                var segmentedWordList = [String]()
+                if language == .english {
+//                    segmentedWordList = English\(currentWord.count)Letters.words
+                    segmentedWordList = WordLists.englishWordsByCount[currentWord.count]!
+                } else if language == .french {
+//                    segmentedWordList = french_words_\(currentWord.count)_letters.words
+                    segmentedWordList = WordLists.frenchWordsByCount[currentWord.count]!
+
+                }
+                
+                isWordValid = segmentedWordList.contains(currentWord.joined())
+            }
         } else {
             isWordValid = false
+        }
+    }
+    
+    private func updateWordValidity2() {
+        switch gameType {
+        case .regularScramble:
+            if currentWord.count >= 4 && wordsList.contains(currentWord.joined()) {
+                isWordValid = true
+            } else {
+                isWordValid = false
+            }
+        case .newYorkTimesScramble:
+            if currentWord.count >= 4 && currentWord.contains(keyLetter) && wordsList.contains(currentWord.joined()) {
+                isWordValid = true
+            } else {
+                isWordValid = false
+            }
         }
     }
 
@@ -178,8 +265,7 @@ class GameManager: ObservableObject {
         //    A four-letter word scores one point
         if word.count == 4 {
             currentWordScore += 1
-        }
-        else {
+        } else {
             //    A pangram scores an additional 10 points
             if isPangram(word: word){
                 currentWordScore += 10
@@ -199,5 +285,46 @@ class GameManager: ObservableObject {
         DispatchQueue.main.asyncAfter(deadline: .now() + duration) {
             self.message = nil
         }
+    }
+    
+    private struct WordLists {
+        static let englishWordsByCount: [Int: [String]] = [
+            3: English3Letters.words,
+            4: English4Letters.words,
+            5: English5Letters.words,
+            6: English6Letters.words,
+            7: English7Letters.words,
+            8: English8Letters.words,
+            9: English9Letters.words,
+            10: English10Letters.words,
+            11: English11Letters.words,
+            12: English12Letters.words,
+            13: English13Letters.words,
+            14: English14Letters.words,
+            15: English15Letters.words,
+            16: English16Letters.words,
+            17: English17Letters.words,
+            18: English18Letters.words,
+            19: English19Letters.words,
+            20: English20Letters.words
+        ]
+
+        static let frenchWordsByCount: [Int: [String]] = [
+            3: french_words_3_letters.words,
+            4: french_words_4_letters.words,
+            5: french_words_5_letters.words,
+            6: french_words_6_letters.words,
+            7: french_words_7_letters.words,
+            8: french_words_8_letters.words,
+            9: french_words_9_letters.words,
+            10: french_words_10_letters.words,
+            11: french_words_11_letters.words,
+            12: french_words_12_letters.words,
+            13: french_words_13_letters.words,
+            14: french_words_14_letters.words,
+            15: french_words_15_letters.words,
+            16: french_words_16_letters.words,
+            17: french_words_17_letters.words
+        ]
     }
 }

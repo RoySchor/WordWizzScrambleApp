@@ -26,9 +26,9 @@ struct HintsView: View {
                 }
                 
                 Section {
-                    LabeledContent("Total Possible Words", value: String(gameManager.possibleWords().count))
-                    LabeledContent("Total Possible Points", value: String(gameManager.maxPossiblePoints()))
-                    LabeledContent("Number of Possible Panagrams", value: String(gameManager.numPossiblePangrams()))
+                    LabeledContent("Total Possible Words", value: String(gameManager.listPossibleWords.count))
+                    LabeledContent("Total Possible Points", value: String(gameManager.maxPossibleScore))
+                    LabeledContent("Number of Possible Panagrams", value: String(gameManager.numPangrams))
                 } header: {
                     Text("Overall Hints")
                         .bold()
@@ -63,7 +63,7 @@ struct HintsView: View {
     @ViewBuilder
     private func specificHintsView() -> some View {
         ForEach(gameManager.letters.sorted(), id: \.self) { letter in
-            ForEach(4...gameManager.maxLengthOfWords(), id: \.self) { length in
+            ForEach(4...gameManager.maxLength, id: \.self) { length in
                 let wordCountAtLength = gameManager.wordCountStartingWith(letter: letter, length: length)
                 
                 if wordCountAtLength > 0 {
@@ -76,7 +76,7 @@ struct HintsView: View {
     @ViewBuilder
     private func allPossibleWordsView() -> some View {
         ScrollView {
-            Text(gameManager.possibleWords().sorted().joined(separator: ", "))
+            Text(gameManager.listPossibleWords.sorted().joined(separator: ", "))
                 .padding()
         }
     }

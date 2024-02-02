@@ -1,0 +1,7 @@
+import Foundation
+
+struct English19Letters {
+
+    static let words = ["adrenocorticotropic", "adrenocorticotropin", "auriculoventricular", "bacteriochlorophyll", "ballistocardiograph", "cartilaginification", "chromatographically", "chromoblastomycosis", "contemporaneousness", "conventionalisation", "conventionalization", "counterdemonstrator", "counterintelligence", "countertransference", "cytophotometrically", "diethylstilbesterol", "diethylstilboestrol", "dihydrostreptomycin", "echoencephalography", "electrocardiography", "encephalomeningitis", "glottochronological", "hydrochlorothiazide", "hydroxytetracycline", "hyperparathyroidism", "hypoadrenocorticism", "hypolipoproteinemia", "hysterosalpingogram", "incomprehensibility", "incontrovertibility", "individualistically", "intellectualisation", "intellectualization", "interchangeableness", "interdenominational", "makataimeshekiakiak", "medroxyprogesterone", "meningoencephalitis", "nonrepresentational", "otorhinolaryngology", "parasympathomimetic", "phacoemulsification", "phenylpropanolamine", "pneumoencephalogram", "professionalisation", "professionalization", "pseudohallucination", "pseudohermaphrodite", "radiopharmaceutical", "resorcinolphthalein", "schizosaccharomyces", "sociolinguistically", "sternocleidomastoid", "straightforwardness", "tetrachloroethylene", "tetrafluoroethylene", "tetramethyldiarsine", "ultracentrifugation", "uncommunicativeness", "unconscientiousness", "unselfconsciousness", "xenotransplantation"]
+
+}
