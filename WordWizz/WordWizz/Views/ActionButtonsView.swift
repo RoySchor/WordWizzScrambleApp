@@ -25,7 +25,7 @@ struct ActionButtonsView: View {
                     .frame(width: 80, height: 55)
                     .foregroundColor(.primary)
                     .background(gameManager.isWordValid ? Color.green.gradient : Color(Constants.FoundWordsBackgroundColorName.bkColor).gradient)
-                    .opacity((gameManager.currentWord.count < 4 || !gameManager.isWordValid) ? 0.4 : 1)
+                    .opacity((gameManager.currentWord.count < 3 || !gameManager.isWordValid) ? 0.4 : 1)
                     .cornerRadius(15)
             }
             .disabled(!gameManager.isWordValid)
