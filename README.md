@@ -6,7 +6,7 @@
 Word Wizz is an app that allows the user to play two games depending on their choice. Each time the app is opened, a welcome page is displayed.
 In this welcome page, the user is given the option to select their game mode as well as instructions for how to play and score.
 
-### Game Options
+## Game Options
 **Scramble Game**
   - Regular Scramble, given a set of letters, create as many valid words as possible
 
@@ -15,6 +15,21 @@ In this welcome page, the user is given the option to select their game mode as 
 
 <img src='WordWizz/WordWizz Welcome Screen.PNG' width="170" height="350">
 
+#### Visual of Welcome Screen
+
+https://github.com/RoySchor/WordWizzScrambleApp/assets/70181314/fda6f2ff-feb8-4ca4-a1dc-ed3ba1a55c0a
 
 
 From here, the user enters the game and is able to play whichever game they selected.
+
+## Functionality
+- Switch languages: English, French, Spanish
+- Switch letter bank size: 5 letters, 6 letters, 7 letters
+- Receive current stats, specific hints, and all possible words available to guess from word bank
+- Shuffle letters
+- New Game/ get new letters
+- Enter the welcome page and change game modes
+
+  #### Visual of Game Functionality
+
+  
