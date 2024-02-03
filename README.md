@@ -1,4 +1,4 @@
-<img src='WordWizz/ReadMe Display Files/WordWizz App.jpeg' width="250" height="290">
+<img src='WordWizz/ReadMe Display Files/WordWizz App.jpeg' width="250" height="305">
 
 # Word Wizz
 **An IOS Application replicating two versions of the Scramble Game**
