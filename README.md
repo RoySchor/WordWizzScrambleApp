@@ -1,7 +1,7 @@
 <img src='WordWizz/ReadMe Display Files/WordWizz App.jpeg' width="250" height="305">
 
 # Word Wizz
-**An IOS Application replicating two versions of the Scramble Game**
+**An IOS Application replicating two versions of the Scrabble Game**
 
 Word Wizz is an app that allows the user to choose between two games. When the app is opened, a welcome page is displayed.
 In this welcome page, the user is given the option to select their game mode as well as instructions for how to play and how the game is scored.
